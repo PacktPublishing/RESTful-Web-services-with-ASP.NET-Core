@@ -1,0 +1,18 @@
+c:\users\fabian\documents\visual studio 2017\Projects\packt_webapp\packt_webapp\bin\Debug\netcoreapp1.1\packt_webapp.deps.json
+c:\users\fabian\documents\visual studio 2017\Projects\packt_webapp\packt_webapp\bin\Debug\netcoreapp1.1\packt_webapp.runtimeconfig.json
+c:\users\fabian\documents\visual studio 2017\Projects\packt_webapp\packt_webapp\bin\Debug\netcoreapp1.1\packt_webapp.runtimeconfig.dev.json
+c:\users\fabian\documents\visual studio 2017\Projects\packt_webapp\packt_webapp\obj\Debug\netcoreapp1.1\packt_webapp.csprojResolveAssemblyReference.cache
+c:\users\fabian\documents\visual studio 2017\Projects\packt_webapp\packt_webapp\obj\Debug\netcoreapp1.1\packt_webapp.AssemblyInfo.cs
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\packt_webapp\bin\Debug\netcoreapp1.1\packt_webapp.dll
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\packt_webapp\bin\Debug\netcoreapp1.1\packt_webapp.pdb
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\packt_webapp\obj\Debug\netcoreapp1.1\packt_webapp.dll
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\packt_webapp\obj\Debug\netcoreapp1.1\packt_webapp.pdb
+C:\Users\Fabian\Desktop\packt_webapp\packt_webapp\bin\Debug\netcoreapp1.1\packt_webapp.deps.json
+C:\Users\Fabian\Desktop\packt_webapp\packt_webapp\bin\Debug\netcoreapp1.1\packt_webapp.runtimeconfig.json
+C:\Users\Fabian\Desktop\packt_webapp\packt_webapp\bin\Debug\netcoreapp1.1\packt_webapp.runtimeconfig.dev.json
+C:\Users\Fabian\Desktop\packt_webapp\packt_webapp\obj\Debug\netcoreapp1.1\packt_webapp.csprojResolveAssemblyReference.cache
+C:\Users\Fabian\Desktop\packt_webapp\packt_webapp\obj\Debug\netcoreapp1.1\packt_webapp.AssemblyInfo.cs
+C:\Users\Fabian\Desktop\packt_webapp\packt_webapp\obj\Debug\netcoreapp1.1\packt_webapp.dll
+C:\Users\Fabian\Desktop\packt_webapp\packt_webapp\obj\Debug\netcoreapp1.1\packt_webapp.pdb
+C:\Users\Fabian\Desktop\packt_webapp\packt_webapp\bin\Debug\netcoreapp1.1\packt_webapp.dll
+C:\Users\Fabian\Desktop\packt_webapp\packt_webapp\bin\Debug\netcoreapp1.1\packt_webapp.pdb

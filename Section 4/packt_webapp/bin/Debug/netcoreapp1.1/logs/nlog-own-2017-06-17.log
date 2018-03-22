@@ -1,0 +1,10 @@
+2017-06-17 14:05:14.8325|0|packt_webapp.Controllers.CustomersController|INFO|  customerscontroller started |url: |action: 
+2017-06-17 14:05:14.9185|0|packt_webapp.Controllers.CustomersController|INFO|  -----> GetAllCustomers() |url: |action:
+2017-06-17 14:55:45.7951|0|packt_webapp.Controllers.CustomersController|INFO|  customerscontroller started |url: |action: 
+2017-06-17 14:56:10.0516|500|Global exception logger|ERROR|  Test Test|url: |action: 
+2017-06-17 15:47:30.9542|500|Global exception logger|ERROR|  Value cannot be null.
+Parameter name: entity Value cannot be null.
+Parameter name: entity|url: |action: 
+2017-06-17 15:55:47.7982|500|Global exception logger|ERROR|  Value cannot be null.
+Parameter name: entity Value cannot be null.
+Parameter name: entity|url: |action: 

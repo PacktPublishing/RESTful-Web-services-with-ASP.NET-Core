@@ -1,0 +1,1559 @@
+2017-07-04 21:13:55.9091|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:13:56.2951|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:13:56.3146|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:13:56.4951|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (154ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+2017-07-04 21:13:56.4951|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:13:56.7086|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-07-04 21:13:56.7216|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-07-04 21:13:56.8576|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-07-04 21:13:56.8786|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:13:56.9186|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (29ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-07-04 21:13:56.9926|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:13:57.0181|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:13:57.0181|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-07-04 21:13:57.1861|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (75ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT; 
+2017-07-04 21:13:57.1861|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-07-04 21:13:57.1976|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:13:57.2466|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:13:57.2466|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-07-04 21:13:57.3471|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (68ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?', @p9='?', @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?', @p13='?', @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?', @p17='?', @p18='?' (Size = 4000), @p19='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11),
+(@p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19); 
+2017-07-04 21:13:57.3586|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-07-04 21:13:57.3586|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:13:57.4631|3|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting starting 
+2017-07-04 21:13:57.5936|4|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting started 
+2017-07-04 21:13:57.6351|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250R" started. 
+2017-07-04 21:13:57.6351|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250S" started. 
+2017-07-04 21:13:57.7586|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:55869/  0 
+2017-07-04 21:13:57.7586|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/   
+2017-07-04 21:13:57.8676|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:57.8871|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250R" completed keep alive response. 
+2017-07-04 21:13:57.8871|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 158.5373ms 200  
+2017-07-04 21:13:58.1821|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.1821|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/ does not match a supported file type 
+2017-07-04 21:13:58.2226|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/index.html'. Physical path: 'N/A' 
+2017-07-04 21:13:58.2691|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250S" completed keep alive response. 
+2017-07-04 21:13:58.2691|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 539.7867ms 200 text/html 
+2017-07-04 21:13:58.2791|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/typography.css   
+2017-07-04 21:13:58.2791|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/reset.css   
+2017-07-04 21:13:58.2791|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250U" started. 
+2017-07-04 21:13:58.2791|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250T" started. 
+2017-07-04 21:13:58.2791|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250V" started. 
+2017-07-04 21:13:58.2791|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.2791|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery-1.8.0.min.js   
+2017-07-04 21:13:58.3156|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.2791|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.3156|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.2791|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/object-assign-pollyfill.js   
+2017-07-04 21:13:58.3156|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.2791|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/screen.css   
+2017-07-04 21:13:58.3226|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.3156|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.3226|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.3156|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.3226|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/object-assign-pollyfill.js does not match an existing file 
+2017-07-04 21:13:58.2791|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6323902510" started. 
+2017-07-04 21:13:58.3226|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/reset.css does not match an existing file 
+2017-07-04 21:13:58.3156|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery-1.8.0.min.js does not match an existing file 
+2017-07-04 21:13:58.3226|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.3581|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/reset.css was not modified 
+2017-07-04 21:13:58.3226|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/typography.css does not match an existing file 
+2017-07-04 21:13:58.3226|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.slideto.min.js   
+2017-07-04 21:13:58.3581|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.3581|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/screen.css does not match an existing file 
+2017-07-04 21:13:58.3581|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/reset.css 
+2017-07-04 21:13:58.3581|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/screen.css was not modified 
+2017-07-04 21:13:58.3581|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/screen.css 
+2017-07-04 21:13:58.3581|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250U" completed keep alive response. 
+2017-07-04 21:13:58.3581|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/typography.css was not modified 
+2017-07-04 21:13:58.3746|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/typography.css 
+2017-07-04 21:13:58.3746|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250S" completed keep alive response. 
+2017-07-04 21:13:58.3581|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/object-assign-pollyfill.js was not modified 
+2017-07-04 21:13:58.3891|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/object-assign-pollyfill.js 
+2017-07-04 21:13:58.3891|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250T" completed keep alive response. 
+2017-07-04 21:13:58.3891|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 109.3903ms 304 application/javascript 
+2017-07-04 21:13:58.3581|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250R" completed keep alive response. 
+2017-07-04 21:13:58.3891|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 109.9792ms 304 text/css 
+2017-07-04 21:13:58.3891|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 115.5331ms 304 text/css 
+2017-07-04 21:13:58.3891|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/handlebars-4.0.5.js   
+2017-07-04 21:13:58.3581|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.3581|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 86.9833ms 304 text/css 
+2017-07-04 21:13:58.4066|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.ba-bbq.min.js   
+2017-07-04 21:13:58.3581|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery-1.8.0.min.js was not modified 
+2017-07-04 21:13:58.4066|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery-1.8.0.min.js 
+2017-07-04 21:13:58.4066|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250V" completed keep alive response. 
+2017-07-04 21:13:58.4066|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 127.7637ms 304 application/javascript 
+2017-07-04 21:13:58.4066|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.4066|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.slideto.min.js does not match an existing file 
+2017-07-04 21:13:58.4066|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/lodash.min.js   
+2017-07-04 21:13:58.4066|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.4161|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.ba-bbq.min.js does not match an existing file 
+2017-07-04 21:13:58.3891|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.wiggle.min.js   
+2017-07-04 21:13:58.4066|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.4161|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.4066|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.slideto.min.js was not modified 
+2017-07-04 21:13:58.4161|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.slideto.min.js 
+2017-07-04 21:13:58.4161|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.4161|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/lodash.min.js does not match an existing file 
+2017-07-04 21:13:58.4066|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.4161|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.4161|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/backbone-min.js   
+2017-07-04 21:13:58.4161|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.ba-bbq.min.js was not modified 
+2017-07-04 21:13:58.4431|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.ba-bbq.min.js 
+2017-07-04 21:13:58.4431|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.4431|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.wiggle.min.js does not match an existing file 
+2017-07-04 21:13:58.4431|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/lodash.min.js was not modified 
+2017-07-04 21:13:58.4161|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6323902510" completed keep alive response. 
+2017-07-04 21:13:58.4476|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 123.8072ms 304 application/javascript 
+2017-07-04 21:13:58.4476|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/lodash.min.js 
+2017-07-04 21:13:58.4476|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250T" completed keep alive response. 
+2017-07-04 21:13:58.4636|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 52.7155ms 304 application/javascript 
+2017-07-04 21:13:58.4636|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack_extended.js   
+2017-07-04 21:13:58.4431|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.4431|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250U" completed keep alive response. 
+2017-07-04 21:13:58.4476|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.4636|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.4476|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/swagger-ui.min.js   
+2017-07-04 21:13:58.4636|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/handlebars-4.0.5.js does not match an existing file 
+2017-07-04 21:13:58.4476|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.wiggle.min.js was not modified 
+2017-07-04 21:13:58.4636|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.wiggle.min.js 
+2017-07-04 21:13:58.4636|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/handlebars-4.0.5.js was not modified 
+2017-07-04 21:13:58.4636|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/backbone-min.js does not match an existing file 
+2017-07-04 21:13:58.4636|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.4786|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/backbone-min.js was not modified 
+2017-07-04 21:13:58.4786|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/backbone-min.js 
+2017-07-04 21:13:58.4786|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250R" completed keep alive response. 
+2017-07-04 21:13:58.4786|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 91.2172ms 304 application/javascript 
+2017-07-04 21:13:58.4786|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.4636|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 62.3797ms 304 application/javascript 
+2017-07-04 21:13:58.4636|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.4786|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack.js   
+2017-07-04 21:13:58.4946|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack_extended.js does not match an existing file 
+2017-07-04 21:13:58.4946|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/highlight.9.1.0.pack_extended.js was not modified 
+2017-07-04 21:13:58.4946|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/highlight.9.1.0.pack_extended.js 
+2017-07-04 21:13:58.4946|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250T" completed keep alive response. 
+2017-07-04 21:13:58.4946|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 41.4662ms 304 application/javascript 
+2017-07-04 21:13:58.4786|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/handlebars-4.0.5.js 
+2017-07-04 21:13:58.4786|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250V" completed keep alive response. 
+2017-07-04 21:13:58.5111|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250S" completed keep alive response. 
+2017-07-04 21:13:58.5111|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 115.8797ms 304 application/javascript 
+2017-07-04 21:13:58.4786|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jsoneditor.min.js   
+2017-07-04 21:13:58.5111|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.4946|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.4786|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/swagger-ui.min.js does not match an existing file 
+2017-07-04 21:13:58.5111|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/swagger-oauth.js   
+2017-07-04 21:13:58.5111|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 94.6597ms 304 application/javascript 
+2017-07-04 21:13:58.5111|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.5111|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /swagger-ui.min.js was not modified 
+2017-07-04 21:13:58.5276|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /swagger-ui.min.js 
+2017-07-04 21:13:58.5276|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6323902510" completed keep alive response. 
+2017-07-04 21:13:58.5276|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 81.1099ms 304 application/javascript 
+2017-07-04 21:13:58.5111|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.5111|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.5276|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/marked.js   
+2017-07-04 21:13:58.5416|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jsoneditor.min.js does not match an existing file 
+2017-07-04 21:13:58.5276|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack.js does not match an existing file 
+2017-07-04 21:13:58.5416|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/highlight.9.1.0.pack.js was not modified 
+2017-07-04 21:13:58.5416|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/highlight.9.1.0.pack.js 
+2017-07-04 21:13:58.5416|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.5276|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.5416|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jsoneditor.min.js was not modified 
+2017-07-04 21:13:58.5416|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jsoneditor.min.js 
+2017-07-04 21:13:58.5416|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250R" completed keep alive response. 
+2017-07-04 21:13:58.5416|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250U" completed keep alive response. 
+2017-07-04 21:13:58.5416|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 57.8681ms 304 application/javascript 
+2017-07-04 21:13:58.5416|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 58.7327ms 304 application/javascript 
+2017-07-04 21:13:58.5416|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/swagger-oauth.js does not match an existing file 
+2017-07-04 21:13:58.5416|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.5416|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/marked.js does not match an existing file 
+2017-07-04 21:13:58.5416|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/swagger-oauth.js was not modified 
+2017-07-04 21:13:58.5571|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/swagger-oauth.js 
+2017-07-04 21:13:58.5571|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250T" completed keep alive response. 
+2017-07-04 21:13:58.5571|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/marked.js was not modified 
+2017-07-04 21:13:58.5571|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/marked.js 
+2017-07-04 21:13:58.5571|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250V" completed keep alive response. 
+2017-07-04 21:13:58.5571|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 49.8121ms 304 application/javascript 
+2017-07-04 21:13:58.5751|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/images/logo_small.png   
+2017-07-04 21:13:58.5751|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.5751|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 48.6946ms 304 application/javascript 
+2017-07-04 21:13:58.5751|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.5751|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/images/logo_small.png does not match an existing file 
+2017-07-04 21:13:58.5751|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /images/logo_small.png was not modified 
+2017-07-04 21:13:58.5751|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /images/logo_small.png 
+2017-07-04 21:13:58.5751|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250S" completed keep alive response. 
+2017-07-04 21:13:58.5751|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 11.9555ms 304 image/png 
+2017-07-04 21:13:58.5901|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/print.css   
+2017-07-04 21:13:58.5901|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.5901|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.5901|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/print.css does not match an existing file 
+2017-07-04 21:13:58.5901|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/print.css was not modified 
+2017-07-04 21:13:58.5901|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/print.css 
+2017-07-04 21:13:58.5901|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6323902510" completed keep alive response. 
+2017-07-04 21:13:58.5901|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 9.3202ms 304 text/css 
+2017-07-04 21:13:58.8041|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/v1/swagger.json   
+2017-07-04 21:13:58.8041|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:13:58.8041|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:13:58.8066|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/v1/swagger.json does not match an existing file 
+2017-07-04 21:13:59.6016|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632390250U" completed keep alive response. 
+2017-07-04 21:13:59.6036|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 799.2626ms 200 application/json 
+2017-07-04 21:17:10.4778|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:17:10.8203|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:17:10.8418|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:17:10.9973|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (131ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+2017-07-04 21:17:10.9973|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:17:11.2868|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-07-04 21:17:11.3008|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-07-04 21:17:11.4643|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-07-04 21:17:11.4878|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:17:11.5123|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-07-04 21:17:11.5938|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:17:11.6218|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:17:11.6218|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-07-04 21:17:11.7603|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (62ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT; 
+2017-07-04 21:17:11.7603|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-07-04 21:17:11.7603|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:17:11.8173|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:17:11.8173|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-07-04 21:17:11.8913|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (43ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?', @p9='?', @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?', @p13='?', @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?', @p17='?', @p18='?' (Size = 4000), @p19='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11),
+(@p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19); 
+2017-07-04 21:17:11.9088|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-07-04 21:17:11.9088|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:17:12.0453|3|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting starting 
+2017-07-04 21:17:12.1873|4|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting started 
+2017-07-04 21:17:12.2473|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBV" started. 
+2017-07-04 21:17:12.2473|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBU" started. 
+2017-07-04 21:17:12.3538|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:55869/  0 
+2017-07-04 21:17:12.3538|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/   
+2017-07-04 21:17:12.4688|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.4863|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBU" completed keep alive response. 
+2017-07-04 21:17:12.4958|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 160.6619ms 200  
+2017-07-04 21:17:12.7533|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:12.7628|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/ does not match a supported file type 
+2017-07-04 21:17:12.7958|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/index.html'. Physical path: 'N/A' 
+2017-07-04 21:17:12.8488|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBV" completed keep alive response. 
+2017-07-04 21:17:12.8488|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 523.6247ms 200 text/html 
+2017-07-04 21:17:12.8558|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/typography.css   
+2017-07-04 21:17:12.8558|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC1" started. 
+2017-07-04 21:17:12.8558|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/reset.css   
+2017-07-04 21:17:12.8558|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC0" started. 
+2017-07-04 21:17:12.8558|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.8558|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC3" started. 
+2017-07-04 21:17:12.8558|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/object-assign-pollyfill.js   
+2017-07-04 21:17:12.8558|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:12.8558|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.slideto.min.js   
+2017-07-04 21:17:12.8708|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.8708|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/reset.css does not match an existing file 
+2017-07-04 21:17:12.8708|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.8558|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.8848|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:12.8848|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/reset.css was not modified 
+2017-07-04 21:17:12.8848|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:12.8558|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC2" started. 
+2017-07-04 21:17:12.8558|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/screen.css   
+2017-07-04 21:17:12.8848|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/object-assign-pollyfill.js does not match an existing file 
+2017-07-04 21:17:12.8848|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/reset.css 
+2017-07-04 21:17:12.8848|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/typography.css does not match an existing file 
+2017-07-04 21:17:12.9208|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/object-assign-pollyfill.js was not modified 
+2017-07-04 21:17:12.9208|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/object-assign-pollyfill.js 
+2017-07-04 21:17:12.9208|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/typography.css was not modified 
+2017-07-04 21:17:12.9208|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/typography.css 
+2017-07-04 21:17:12.9208|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBV" completed keep alive response. 
+2017-07-04 21:17:12.9208|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.8848|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:12.9358|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 79.8039ms 304 text/css 
+2017-07-04 21:17:12.9208|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC1" completed keep alive response. 
+2017-07-04 21:17:12.9358|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 81.1131ms 304 application/javascript 
+2017-07-04 21:17:12.8848|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery-1.8.0.min.js   
+2017-07-04 21:17:12.9358|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.9208|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBU" completed keep alive response. 
+2017-07-04 21:17:12.9358|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.ba-bbq.min.js   
+2017-07-04 21:17:12.9358|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.slideto.min.js does not match an existing file 
+2017-07-04 21:17:12.9473|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.slideto.min.js was not modified 
+2017-07-04 21:17:12.9473|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.slideto.min.js 
+2017-07-04 21:17:12.9358|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.wiggle.min.js   
+2017-07-04 21:17:12.9473|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 91.4748ms 304 text/css 
+2017-07-04 21:17:12.9473|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.9473|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/handlebars-4.0.5.js   
+2017-07-04 21:17:12.9473|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.9473|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC3" completed keep alive response. 
+2017-07-04 21:17:12.9473|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 92.9006ms 304 application/javascript 
+2017-07-04 21:17:12.9473|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:12.9473|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.9473|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:12.9358|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:12.9473|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/screen.css does not match an existing file 
+2017-07-04 21:17:12.9633|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/screen.css was not modified 
+2017-07-04 21:17:12.9358|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:12.9473|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:12.9473|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/handlebars-4.0.5.js does not match an existing file 
+2017-07-04 21:17:12.9633|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.ba-bbq.min.js does not match an existing file 
+2017-07-04 21:17:12.9473|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.wiggle.min.js does not match an existing file 
+2017-07-04 21:17:12.9473|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/lodash.min.js   
+2017-07-04 21:17:12.9633|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/screen.css 
+2017-07-04 21:17:12.9633|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery-1.8.0.min.js does not match an existing file 
+2017-07-04 21:17:12.9633|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.9633|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.ba-bbq.min.js was not modified 
+2017-07-04 21:17:12.9633|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.ba-bbq.min.js 
+2017-07-04 21:17:12.9633|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:12.9788|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC1" completed keep alive response. 
+2017-07-04 21:17:12.9633|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/handlebars-4.0.5.js was not modified 
+2017-07-04 21:17:12.9788|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 39.765ms 304 application/javascript 
+2017-07-04 21:17:12.9633|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.wiggle.min.js was not modified 
+2017-07-04 21:17:12.9788|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.wiggle.min.js 
+2017-07-04 21:17:12.9788|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBV" completed keep alive response. 
+2017-07-04 21:17:12.9788|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/swagger-ui.min.js   
+2017-07-04 21:17:12.9633|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC0" completed keep alive response. 
+2017-07-04 21:17:12.9788|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 128.096ms 304 text/css 
+2017-07-04 21:17:12.9633|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery-1.8.0.min.js was not modified 
+2017-07-04 21:17:12.9948|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery-1.8.0.min.js 
+2017-07-04 21:17:12.9788|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.9948|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/backbone-min.js   
+2017-07-04 21:17:12.9788|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/handlebars-4.0.5.js 
+2017-07-04 21:17:12.9788|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/lodash.min.js does not match an existing file 
+2017-07-04 21:17:12.9948|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBU" completed keep alive response. 
+2017-07-04 21:17:12.9948|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:12.9948|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 49.4813ms 304 application/javascript 
+2017-07-04 21:17:12.9948|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:12.9788|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 51.3188ms 304 application/javascript 
+2017-07-04 21:17:12.9948|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/lodash.min.js was not modified 
+2017-07-04 21:17:13.0098|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/lodash.min.js 
+2017-07-04 21:17:12.9948|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/swagger-ui.min.js does not match an existing file 
+2017-07-04 21:17:13.0098|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jsoneditor.min.js   
+2017-07-04 21:17:12.9948|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC2" completed keep alive response. 
+2017-07-04 21:17:13.0098|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /swagger-ui.min.js was not modified 
+2017-07-04 21:17:13.0258|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /swagger-ui.min.js 
+2017-07-04 21:17:12.9948|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:13.0098|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack.js   
+2017-07-04 21:17:13.0258|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/backbone-min.js does not match an existing file 
+2017-07-04 21:17:13.0258|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:13.0098|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC3" completed keep alive response. 
+2017-07-04 21:17:13.0258|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:13.0258|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/backbone-min.js was not modified 
+2017-07-04 21:17:13.0258|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/backbone-min.js 
+2017-07-04 21:17:13.0258|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 75.1628ms 304 application/javascript 
+2017-07-04 21:17:13.0098|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 134.084ms 304 application/javascript 
+2017-07-04 21:17:13.0258|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC1" completed keep alive response. 
+2017-07-04 21:17:13.0258|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack.js does not match an existing file 
+2017-07-04 21:17:13.0413|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 61.3108ms 304 application/javascript 
+2017-07-04 21:17:13.0413|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/highlight.9.1.0.pack.js was not modified 
+2017-07-04 21:17:13.0413|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/marked.js   
+2017-07-04 21:17:13.0098|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:13.0413|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:13.0413|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/highlight.9.1.0.pack.js 
+2017-07-04 21:17:13.0568|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBV" completed keep alive response. 
+2017-07-04 21:17:13.0413|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack_extended.js   
+2017-07-04 21:17:13.0568|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:13.0568|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 48.6721ms 304 application/javascript 
+2017-07-04 21:17:13.0413|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:13.0413|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:13.0413|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC0" completed keep alive response. 
+2017-07-04 21:17:13.0568|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 75.9834ms 304 application/javascript 
+2017-07-04 21:17:13.0413|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/swagger-oauth.js   
+2017-07-04 21:17:13.0743|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:13.0568|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jsoneditor.min.js does not match an existing file 
+2017-07-04 21:17:13.0743|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jsoneditor.min.js was not modified 
+2017-07-04 21:17:13.0743|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jsoneditor.min.js 
+2017-07-04 21:17:13.0568|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:13.0568|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/marked.js does not match an existing file 
+2017-07-04 21:17:13.0743|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack_extended.js does not match an existing file 
+2017-07-04 21:17:13.0743|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/highlight.9.1.0.pack_extended.js was not modified 
+2017-07-04 21:17:13.0933|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/highlight.9.1.0.pack_extended.js 
+2017-07-04 21:17:13.0743|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:13.0743|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/marked.js was not modified 
+2017-07-04 21:17:13.0933|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/marked.js 
+2017-07-04 21:17:13.0933|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC3" completed keep alive response. 
+2017-07-04 21:17:13.0933|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 58.1046ms 304 application/javascript 
+2017-07-04 21:17:13.0743|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBU" completed keep alive response. 
+2017-07-04 21:17:13.1038|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 88.9059ms 304 application/javascript 
+2017-07-04 21:17:13.0933|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC2" completed keep alive response. 
+2017-07-04 21:17:13.0933|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/swagger-oauth.js does not match an existing file 
+2017-07-04 21:17:13.1038|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 61.7149ms 304 application/javascript 
+2017-07-04 21:17:13.1038|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/swagger-oauth.js was not modified 
+2017-07-04 21:17:13.1038|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/swagger-oauth.js 
+2017-07-04 21:17:13.1038|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC1" completed keep alive response. 
+2017-07-04 21:17:13.1218|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 69.9336ms 304 application/javascript 
+2017-07-04 21:17:13.1038|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/images/logo_small.png   
+2017-07-04 21:17:13.1218|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:13.1218|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:13.1218|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/images/logo_small.png does not match an existing file 
+2017-07-04 21:17:13.1218|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /images/logo_small.png was not modified 
+2017-07-04 21:17:13.1218|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /images/logo_small.png 
+2017-07-04 21:17:13.1218|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC0" completed keep alive response. 
+2017-07-04 21:17:13.1218|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 22.5414ms 304 image/png 
+2017-07-04 21:17:13.1358|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/print.css   
+2017-07-04 21:17:13.1358|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:13.1358|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:13.1358|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/print.css does not match an existing file 
+2017-07-04 21:17:13.1358|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/print.css was not modified 
+2017-07-04 21:17:13.1358|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/print.css 
+2017-07-04 21:17:13.1358|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBV" completed keep alive response. 
+2017-07-04 21:17:13.1358|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 9.704ms 304 text/css 
+2017-07-04 21:17:13.3353|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/v1/swagger.json   
+2017-07-04 21:17:13.3353|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:17:13.3383|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:17:13.3383|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/v1/swagger.json does not match an existing file 
+2017-07-04 21:17:14.1478|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBU" completed keep alive response. 
+2017-07-04 21:17:14.1478|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 813.6779ms 200 application/json 
+2017-07-04 21:19:02.2242|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC2" received FIN. 
+2017-07-04 21:19:02.2242|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC1" received FIN. 
+2017-07-04 21:19:02.2242|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC0" received FIN. 
+2017-07-04 21:19:02.2242|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC3" received FIN. 
+2017-07-04 21:19:02.2972|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBV" received FIN. 
+2017-07-04 21:19:02.2972|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC0" disconnecting. 
+2017-07-04 21:19:02.2972|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBV" disconnecting. 
+2017-07-04 21:19:02.2972|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBV" sending FIN. 
+2017-07-04 21:19:02.2587|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC2" disconnecting. 
+2017-07-04 21:19:02.2242|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBU" received FIN. 
+2017-07-04 21:19:02.2972|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC2" sending FIN. 
+2017-07-04 21:19:02.2972|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBU" disconnecting. 
+2017-07-04 21:19:02.2972|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC0" sending FIN. 
+2017-07-04 21:19:02.2587|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC1" disconnecting. 
+2017-07-04 21:19:02.2972|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC1" sending FIN. 
+2017-07-04 21:19:02.2972|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC1" sent FIN with status "0". 
+2017-07-04 21:19:02.2972|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC0" sent FIN with status "0". 
+2017-07-04 21:19:02.2972|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC2" sent FIN with status "0". 
+2017-07-04 21:19:02.2972|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBV" sent FIN with status "0". 
+2017-07-04 21:19:02.2972|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC3" disconnecting. 
+2017-07-04 21:19:02.3167|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC0" stopped. 
+2017-07-04 21:19:02.3167|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC2" stopped. 
+2017-07-04 21:19:02.3167|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC1" stopped. 
+2017-07-04 21:19:02.3167|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBU" sending FIN. 
+2017-07-04 21:19:02.3232|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBU" sent FIN with status "0". 
+2017-07-04 21:19:02.3232|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBU" stopped. 
+2017-07-04 21:19:02.3167|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRBV" stopped. 
+2017-07-04 21:19:02.3232|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC3" sending FIN. 
+2017-07-04 21:19:02.3232|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC3" sent FIN with status "0". 
+2017-07-04 21:19:02.3232|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL63252VVRC3" stopped. 
+2017-07-04 21:23:37.4099|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:23:37.7869|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:23:37.8099|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:23:37.9529|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (120ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+2017-07-04 21:23:37.9529|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:23:38.2004|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-07-04 21:23:38.2004|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-07-04 21:23:38.3909|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-07-04 21:23:38.4229|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:23:38.4649|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-07-04 21:23:38.5619|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:23:38.5989|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:23:38.6064|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-07-04 21:23:38.7529|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (58ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT; 
+2017-07-04 21:23:38.7624|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-07-04 21:23:38.7624|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:23:38.8144|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:23:38.8144|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-07-04 21:23:38.9094|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (60ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?', @p9='?', @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?', @p13='?', @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?', @p17='?', @p18='?' (Size = 4000), @p19='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11),
+(@p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19); 
+2017-07-04 21:23:38.9249|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-07-04 21:23:38.9249|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:23:39.0844|3|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting starting 
+2017-07-04 21:23:39.3354|4|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting started 
+2017-07-04 21:23:39.4786|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD1" started. 
+2017-07-04 21:23:39.4786|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD0" started. 
+2017-07-04 21:23:39.6076|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/   
+2017-07-04 21:23:39.6076|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:55869/  0 
+2017-07-04 21:23:39.7251|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:39.7445|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD0" completed keep alive response. 
+2017-07-04 21:23:39.7445|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 165.6443ms 200  
+2017-07-04 21:23:40.0296|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.0441|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/ does not match a supported file type 
+2017-07-04 21:23:40.0751|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/index.html'. Physical path: 'N/A' 
+2017-07-04 21:23:40.1361|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD1" completed keep alive response. 
+2017-07-04 21:23:40.1361|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 559.6191ms 200 text/html 
+2017-07-04 21:23:40.1526|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD2" started. 
+2017-07-04 21:23:40.1526|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.slideto.min.js   
+2017-07-04 21:23:40.1526|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/reset.css   
+2017-07-04 21:23:40.1526|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD3" started. 
+2017-07-04 21:23:40.1526|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.1526|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery-1.8.0.min.js   
+2017-07-04 21:23:40.1526|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD4" started. 
+2017-07-04 21:23:40.1526|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/screen.css   
+2017-07-04 21:23:40.1526|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD5" started. 
+2017-07-04 21:23:40.1526|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/typography.css   
+2017-07-04 21:23:40.1716|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.1526|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.1526|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.1871|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.1526|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.1716|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.1871|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/reset.css does not match an existing file 
+2017-07-04 21:23:40.1871|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.1871|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/screen.css does not match an existing file 
+2017-07-04 21:23:40.1716|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/object-assign-pollyfill.js   
+2017-07-04 21:23:40.1871|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.1871|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.1871|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/reset.css was not modified 
+2017-07-04 21:23:40.1871|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.1871|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.1871|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/typography.css does not match an existing file 
+2017-07-04 21:23:40.2006|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/object-assign-pollyfill.js does not match an existing file 
+2017-07-04 21:23:40.2006|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/typography.css was not modified 
+2017-07-04 21:23:40.2006|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/typography.css 
+2017-07-04 21:23:40.2006|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/reset.css 
+2017-07-04 21:23:40.2006|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD2" completed keep alive response. 
+2017-07-04 21:23:40.1871|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.slideto.min.js does not match an existing file 
+2017-07-04 21:23:40.1871|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/screen.css was not modified 
+2017-07-04 21:23:40.2006|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD3" completed keep alive response. 
+2017-07-04 21:23:40.2141|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/screen.css 
+2017-07-04 21:23:40.2006|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/object-assign-pollyfill.js was not modified 
+2017-07-04 21:23:40.2141|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD4" completed keep alive response. 
+2017-07-04 21:23:40.2141|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 62.8893ms 304 text/css 
+2017-07-04 21:23:40.2141|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/object-assign-pollyfill.js 
+2017-07-04 21:23:40.2141|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD5" completed keep alive response. 
+2017-07-04 21:23:40.2141|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 49.5114ms 304 application/javascript 
+2017-07-04 21:23:40.2141|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.slideto.min.js was not modified 
+2017-07-04 21:23:40.2006|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery-1.8.0.min.js does not match an existing file 
+2017-07-04 21:23:40.2426|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/lodash.min.js   
+2017-07-04 21:23:40.2446|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery-1.8.0.min.js was not modified 
+2017-07-04 21:23:40.2426|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/handlebars-4.0.5.js   
+2017-07-04 21:23:40.2446|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.2141|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 60.9328ms 304 text/css 
+2017-07-04 21:23:40.2446|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.2446|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.ba-bbq.min.js   
+2017-07-04 21:23:40.2446|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/handlebars-4.0.5.js does not match an existing file 
+2017-07-04 21:23:40.2006|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 58.4736ms 304 text/css 
+2017-07-04 21:23:40.2426|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.slideto.min.js 
+2017-07-04 21:23:40.2446|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD0" completed keep alive response. 
+2017-07-04 21:23:40.2446|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 103.2643ms 304 application/javascript 
+2017-07-04 21:23:40.2446|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/handlebars-4.0.5.js was not modified 
+2017-07-04 21:23:40.2611|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/handlebars-4.0.5.js 
+2017-07-04 21:23:40.2446|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery-1.8.0.min.js 
+2017-07-04 21:23:40.2446|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.2611|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD4" completed keep alive response. 
+2017-07-04 21:23:40.2611|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.2611|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/backbone-min.js   
+2017-07-04 21:23:40.2611|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD1" completed keep alive response. 
+2017-07-04 21:23:40.2811|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/lodash.min.js does not match an existing file 
+2017-07-04 21:23:40.2811|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/lodash.min.js was not modified 
+2017-07-04 21:23:40.2811|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 133.4186ms 304 application/javascript 
+2017-07-04 21:23:40.2916|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack.js   
+2017-07-04 21:23:40.2916|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.2446|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.wiggle.min.js   
+2017-07-04 21:23:40.2446|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.2916|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.2916|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.2811|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/lodash.min.js 
+2017-07-04 21:23:40.2811|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.2916|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack.js does not match an existing file 
+2017-07-04 21:23:40.2916|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.2811|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 37.8913ms 304 application/javascript 
+2017-07-04 21:23:40.3126|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/swagger-ui.min.js   
+2017-07-04 21:23:40.2916|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD5" completed keep alive response. 
+2017-07-04 21:23:40.2916|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.3226|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 79.4507ms 304 application/javascript 
+2017-07-04 21:23:40.3226|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack_extended.js   
+2017-07-04 21:23:40.2916|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.2916|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/highlight.9.1.0.pack.js was not modified 
+2017-07-04 21:23:40.3226|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/highlight.9.1.0.pack.js 
+2017-07-04 21:23:40.3226|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD1" completed keep alive response. 
+2017-07-04 21:23:40.3126|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.3126|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.ba-bbq.min.js does not match an existing file 
+2017-07-04 21:23:40.3226|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.wiggle.min.js does not match an existing file 
+2017-07-04 21:23:40.3226|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/backbone-min.js does not match an existing file 
+2017-07-04 21:23:40.3381|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.wiggle.min.js was not modified 
+2017-07-04 21:23:40.3226|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.3226|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 37.4663ms 304 application/javascript 
+2017-07-04 21:23:40.3226|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.3381|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/swagger-ui.min.js does not match an existing file 
+2017-07-04 21:23:40.3381|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/backbone-min.js was not modified 
+2017-07-04 21:23:40.3381|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.3381|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /swagger-ui.min.js was not modified 
+2017-07-04 21:23:40.3536|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack_extended.js does not match an existing file 
+2017-07-04 21:23:40.3536|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/backbone-min.js 
+2017-07-04 21:23:40.3226|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.ba-bbq.min.js was not modified 
+2017-07-04 21:23:40.3381|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jsoneditor.min.js   
+2017-07-04 21:23:40.3381|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.wiggle.min.js 
+2017-07-04 21:23:40.3536|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD2" completed keep alive response. 
+2017-07-04 21:23:40.3536|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 105.4994ms 304 application/javascript 
+2017-07-04 21:23:40.3536|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD0" completed keep alive response. 
+2017-07-04 21:23:40.3536|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /swagger-ui.min.js 
+2017-07-04 21:23:40.3536|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/swagger-oauth.js   
+2017-07-04 21:23:40.3536|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD4" completed keep alive response. 
+2017-07-04 21:23:40.3536|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 100.4481ms 304 application/javascript 
+2017-07-04 21:23:40.3536|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 52.7106ms 304 application/javascript 
+2017-07-04 21:23:40.3536|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.ba-bbq.min.js 
+2017-07-04 21:23:40.3536|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.3726|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD3" completed keep alive response. 
+2017-07-04 21:23:40.3726|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.3726|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 124.4096ms 304 application/javascript 
+2017-07-04 21:23:40.3726|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/swagger-oauth.js does not match an existing file 
+2017-07-04 21:23:40.3726|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/swagger-oauth.js was not modified 
+2017-07-04 21:23:40.3536|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/highlight.9.1.0.pack_extended.js was not modified 
+2017-07-04 21:23:40.3536|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.3851|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/highlight.9.1.0.pack_extended.js 
+2017-07-04 21:23:40.3851|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.3851|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD5" completed keep alive response. 
+2017-07-04 21:23:40.3726|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/swagger-oauth.js 
+2017-07-04 21:23:40.3851|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD2" completed keep alive response. 
+2017-07-04 21:23:40.3851|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 26.7444ms 304 application/javascript 
+2017-07-04 21:23:40.3536|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/marked.js   
+2017-07-04 21:23:40.3851|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jsoneditor.min.js does not match an existing file 
+2017-07-04 21:23:40.3851|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jsoneditor.min.js was not modified 
+2017-07-04 21:23:40.3851|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jsoneditor.min.js 
+2017-07-04 21:23:40.3851|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD1" completed keep alive response. 
+2017-07-04 21:23:40.3851|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 51.4574ms 304 application/javascript 
+2017-07-04 21:23:40.3851|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.3851|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 63.9427ms 304 application/javascript 
+2017-07-04 21:23:40.3851|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.3851|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/images/logo_small.png   
+2017-07-04 21:23:40.4006|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/marked.js does not match an existing file 
+2017-07-04 21:23:40.4006|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/marked.js was not modified 
+2017-07-04 21:23:40.4006|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/marked.js 
+2017-07-04 21:23:40.4006|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD0" completed keep alive response. 
+2017-07-04 21:23:40.4006|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 37.3277ms 304 application/javascript 
+2017-07-04 21:23:40.4006|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.4006|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.4006|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/images/logo_small.png does not match an existing file 
+2017-07-04 21:23:40.4006|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /images/logo_small.png was not modified 
+2017-07-04 21:23:40.4166|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /images/logo_small.png 
+2017-07-04 21:23:40.4166|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD4" completed keep alive response. 
+2017-07-04 21:23:40.4166|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 20.8419ms 304 image/png 
+2017-07-04 21:23:40.4166|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/print.css   
+2017-07-04 21:23:40.4166|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.4166|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.4166|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/print.css does not match an existing file 
+2017-07-04 21:23:40.4166|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/print.css was not modified 
+2017-07-04 21:23:40.4166|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/print.css 
+2017-07-04 21:23:40.4166|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD3" completed keep alive response. 
+2017-07-04 21:23:40.4166|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 7.3345ms 304 text/css 
+2017-07-04 21:23:40.6641|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/v1/swagger.json   
+2017-07-04 21:23:40.6641|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:23:40.6701|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:23:40.6701|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/v1/swagger.json does not match an existing file 
+2017-07-04 21:23:41.5861|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD5" completed keep alive response. 
+2017-07-04 21:23:41.5886|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 924.4378ms 200 application/json 
+2017-07-04 21:25:29.4579|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD3" received FIN. 
+2017-07-04 21:25:29.4579|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD0" received FIN. 
+2017-07-04 21:25:29.4579|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD1" received FIN. 
+2017-07-04 21:25:29.5029|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD5" received FIN. 
+2017-07-04 21:25:29.4729|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD4" received FIN. 
+2017-07-04 21:25:29.5419|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD4" disconnecting. 
+2017-07-04 21:25:29.5029|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD0" disconnecting. 
+2017-07-04 21:25:29.5419|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD4" sending FIN. 
+2017-07-04 21:25:29.5099|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD1" disconnecting. 
+2017-07-04 21:25:29.5419|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD1" sending FIN. 
+2017-07-04 21:25:29.5419|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD0" sending FIN. 
+2017-07-04 21:25:29.4579|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD2" received FIN. 
+2017-07-04 21:25:29.5099|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD5" disconnecting. 
+2017-07-04 21:25:29.5029|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD3" disconnecting. 
+2017-07-04 21:25:29.5574|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD3" sending FIN. 
+2017-07-04 21:25:29.5574|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD0" sent FIN with status "0". 
+2017-07-04 21:25:29.5574|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD1" sent FIN with status "0". 
+2017-07-04 21:25:29.5574|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD2" disconnecting. 
+2017-07-04 21:25:29.5574|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD2" sending FIN. 
+2017-07-04 21:25:29.5574|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD3" sent FIN with status "0". 
+2017-07-04 21:25:29.5574|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD2" sent FIN with status "0". 
+2017-07-04 21:25:29.5574|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD3" stopped. 
+2017-07-04 21:25:29.5574|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD0" stopped. 
+2017-07-04 21:25:29.5574|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD2" stopped. 
+2017-07-04 21:25:29.5574|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD1" stopped. 
+2017-07-04 21:25:29.5729|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD4" sent FIN with status "0". 
+2017-07-04 21:25:29.5729|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD5" sending FIN. 
+2017-07-04 21:25:29.5729|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD4" stopped. 
+2017-07-04 21:25:29.5729|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD5" sent FIN with status "0". 
+2017-07-04 21:25:29.5959|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL6328MCTTD5" stopped. 
+2017-07-04 21:27:33.5036|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:27:33.8211|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:27:33.8386|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:27:33.9611|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (98ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+2017-07-04 21:27:33.9611|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:27:34.1931|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-07-04 21:27:34.2031|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-07-04 21:27:34.3911|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-07-04 21:27:34.4156|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:27:34.4556|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (27ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-07-04 21:27:34.5296|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:27:34.5626|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:27:34.5626|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-07-04 21:27:34.7201|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (62ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT; 
+2017-07-04 21:27:34.7201|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-07-04 21:27:34.7326|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:27:34.7876|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:27:34.7921|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-07-04 21:27:34.8841|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (63ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?', @p9='?', @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?', @p13='?', @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?', @p17='?', @p18='?' (Size = 4000), @p19='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11),
+(@p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19); 
+2017-07-04 21:27:34.8971|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-07-04 21:27:34.9121|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:27:35.0306|3|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting starting 
+2017-07-04 21:27:35.2146|4|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting started 
+2017-07-04 21:27:35.3226|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6N" started. 
+2017-07-04 21:27:35.3226|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6O" started. 
+2017-07-04 21:27:35.4676|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/   
+2017-07-04 21:27:35.4676|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:55869/  0 
+2017-07-04 21:27:35.5851|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:35.5991|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6N" completed keep alive response. 
+2017-07-04 21:27:35.6131|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 156.762ms 200  
+2017-07-04 21:27:35.8576|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:35.8731|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/ does not match a supported file type 
+2017-07-04 21:27:35.9056|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/index.html'. Physical path: 'N/A' 
+2017-07-04 21:27:35.9551|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6O" completed keep alive response. 
+2017-07-04 21:27:35.9551|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 510.9629ms 200 text/html 
+2017-07-04 21:27:35.9701|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/reset.css   
+2017-07-04 21:27:35.9701|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6Q" started. 
+2017-07-04 21:27:35.9701|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:35.9701|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6P" started. 
+2017-07-04 21:27:35.9701|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/typography.css   
+2017-07-04 21:27:35.9701|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/object-assign-pollyfill.js   
+2017-07-04 21:27:35.9701|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:35.9701|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6R" started. 
+2017-07-04 21:27:35.9701|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6S" started. 
+2017-07-04 21:27:35.9796|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/reset.css does not match an existing file 
+2017-07-04 21:27:35.9701|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.slideto.min.js   
+2017-07-04 21:27:36.0126|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.0126|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/reset.css was not modified 
+2017-07-04 21:27:35.9701|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:35.9796|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/screen.css   
+2017-07-04 21:27:36.0126|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.0126|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/typography.css does not match an existing file 
+2017-07-04 21:27:36.0126|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery-1.8.0.min.js   
+2017-07-04 21:27:36.0126|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/typography.css was not modified 
+2017-07-04 21:27:35.9796|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.0126|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.0126|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.0126|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/typography.css 
+2017-07-04 21:27:36.0126|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.slideto.min.js does not match an existing file 
+2017-07-04 21:27:36.0126|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6O" completed keep alive response. 
+2017-07-04 21:27:36.0126|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.slideto.min.js was not modified 
+2017-07-04 21:27:36.0126|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.0126|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/object-assign-pollyfill.js does not match an existing file 
+2017-07-04 21:27:36.0266|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/object-assign-pollyfill.js was not modified 
+2017-07-04 21:27:36.0266|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.slideto.min.js 
+2017-07-04 21:27:36.0126|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 52.3422ms 304 text/css 
+2017-07-04 21:27:36.0126|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/reset.css 
+2017-07-04 21:27:36.0126|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.0266|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6Q" completed keep alive response. 
+2017-07-04 21:27:36.0266|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.0266|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.wiggle.min.js   
+2017-07-04 21:27:36.0421|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery-1.8.0.min.js does not match an existing file 
+2017-07-04 21:27:36.0421|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.0421|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 70.1661ms 304 application/javascript 
+2017-07-04 21:27:36.0421|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.0421|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/screen.css does not match an existing file 
+2017-07-04 21:27:36.0421|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery-1.8.0.min.js was not modified 
+2017-07-04 21:27:36.0266|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/object-assign-pollyfill.js 
+2017-07-04 21:27:36.0421|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.0421|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery-1.8.0.min.js 
+2017-07-04 21:27:36.0421|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6S" completed keep alive response. 
+2017-07-04 21:27:36.0266|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6N" completed keep alive response. 
+2017-07-04 21:27:36.0421|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6P" completed keep alive response. 
+2017-07-04 21:27:36.0421|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 85.5556ms 304 text/css 
+2017-07-04 21:27:36.0571|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/handlebars-4.0.5.js   
+2017-07-04 21:27:36.0421|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.wiggle.min.js does not match an existing file 
+2017-07-04 21:27:36.0421|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/screen.css was not modified 
+2017-07-04 21:27:36.0571|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/screen.css 
+2017-07-04 21:27:36.0571|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6R" completed keep alive response. 
+2017-07-04 21:27:36.0571|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 82.095ms 304 text/css 
+2017-07-04 21:27:36.0421|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 41.9972ms 304 application/javascript 
+2017-07-04 21:27:36.0571|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/backbone-min.js   
+2017-07-04 21:27:36.0571|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.wiggle.min.js was not modified 
+2017-07-04 21:27:36.0421|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.ba-bbq.min.js   
+2017-07-04 21:27:36.0421|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 79.5248ms 304 application/javascript 
+2017-07-04 21:27:36.0736|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.wiggle.min.js 
+2017-07-04 21:27:36.0571|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.0571|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.0736|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.0736|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/lodash.min.js   
+2017-07-04 21:27:36.0736|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/backbone-min.js does not match an existing file 
+2017-07-04 21:27:36.0736|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.0736|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6O" completed keep alive response. 
+2017-07-04 21:27:36.0736|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.0736|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 46.2912ms 304 application/javascript 
+2017-07-04 21:27:36.0736|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack.js   
+2017-07-04 21:27:36.0736|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.0571|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/swagger-ui.min.js   
+2017-07-04 21:27:36.0891|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.0736|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.0891|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack.js does not match an existing file 
+2017-07-04 21:27:36.0891|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/highlight.9.1.0.pack.js was not modified 
+2017-07-04 21:27:36.0891|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/highlight.9.1.0.pack.js 
+2017-07-04 21:27:36.0891|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6O" completed keep alive response. 
+2017-07-04 21:27:36.0736|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/backbone-min.js was not modified 
+2017-07-04 21:27:36.0736|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.0891|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.0891|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/handlebars-4.0.5.js does not match an existing file 
+2017-07-04 21:27:36.0891|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/backbone-min.js 
+2017-07-04 21:27:36.1056|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6S" completed keep alive response. 
+2017-07-04 21:27:36.1056|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 37.9715ms 304 application/javascript 
+2017-07-04 21:27:36.0891|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.0736|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/lodash.min.js does not match an existing file 
+2017-07-04 21:27:36.1056|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/lodash.min.js was not modified 
+2017-07-04 21:27:36.1056|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/lodash.min.js 
+2017-07-04 21:27:36.1056|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6P" completed keep alive response. 
+2017-07-04 21:27:36.1056|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/handlebars-4.0.5.js was not modified 
+2017-07-04 21:27:36.0891|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.1196|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/swagger-ui.min.js does not match an existing file 
+2017-07-04 21:27:36.1056|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 37.5862ms 304 application/javascript 
+2017-07-04 21:27:36.0891|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 9.9505ms 304 application/javascript 
+2017-07-04 21:27:36.1056|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.ba-bbq.min.js does not match an existing file 
+2017-07-04 21:27:36.1196|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack_extended.js   
+2017-07-04 21:27:36.1196|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.ba-bbq.min.js was not modified 
+2017-07-04 21:27:36.1056|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jsoneditor.min.js   
+2017-07-04 21:27:36.1196|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/marked.js   
+2017-07-04 21:27:36.1196|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.1056|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/handlebars-4.0.5.js 
+2017-07-04 21:27:36.1196|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.1196|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.1196|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /swagger-ui.min.js was not modified 
+2017-07-04 21:27:36.1196|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/marked.js does not match an existing file 
+2017-07-04 21:27:36.1356|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/marked.js was not modified 
+2017-07-04 21:27:36.1196|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.1356|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /swagger-ui.min.js 
+2017-07-04 21:27:36.1356|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.1356|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6R" completed keep alive response. 
+2017-07-04 21:27:36.1356|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 78.1604ms 304 application/javascript 
+2017-07-04 21:27:36.1356|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack_extended.js does not match an existing file 
+2017-07-04 21:27:36.1356|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.1196|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.ba-bbq.min.js 
+2017-07-04 21:27:36.1196|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6N" completed keep alive response. 
+2017-07-04 21:27:36.1506|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jsoneditor.min.js does not match an existing file 
+2017-07-04 21:27:36.1506|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jsoneditor.min.js was not modified 
+2017-07-04 21:27:36.1356|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/marked.js 
+2017-07-04 21:27:36.1506|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jsoneditor.min.js 
+2017-07-04 21:27:36.1506|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 95.6967ms 304 application/javascript 
+2017-07-04 21:27:36.1506|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6Q" completed keep alive response. 
+2017-07-04 21:27:36.1506|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6S" completed keep alive response. 
+2017-07-04 21:27:36.1711|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 58.6113ms 304 application/javascript 
+2017-07-04 21:27:36.1506|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6P" completed keep alive response. 
+2017-07-04 21:27:36.1506|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/highlight.9.1.0.pack_extended.js was not modified 
+2017-07-04 21:27:36.1711|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 52.7596ms 304 application/javascript 
+2017-07-04 21:27:36.1711|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/highlight.9.1.0.pack_extended.js 
+2017-07-04 21:27:36.1711|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6O" completed keep alive response. 
+2017-07-04 21:27:36.1711|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 56.5548ms 304 application/javascript 
+2017-07-04 21:27:36.1711|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 123.3837ms 304 application/javascript 
+2017-07-04 21:27:36.1506|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/swagger-oauth.js   
+2017-07-04 21:27:36.1926|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.1926|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/images/logo_small.png   
+2017-07-04 21:27:36.2036|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.2036|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.2036|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.2036|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/images/logo_small.png does not match an existing file 
+2017-07-04 21:27:36.2036|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /images/logo_small.png was not modified 
+2017-07-04 21:27:36.2036|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /images/logo_small.png 
+2017-07-04 21:27:36.2036|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6R" completed keep alive response. 
+2017-07-04 21:27:36.2036|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 19.5951ms 304 image/png 
+2017-07-04 21:27:36.2036|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/swagger-oauth.js does not match an existing file 
+2017-07-04 21:27:36.2141|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/swagger-oauth.js was not modified 
+2017-07-04 21:27:36.2141|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/swagger-oauth.js 
+2017-07-04 21:27:36.2141|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6N" completed keep alive response. 
+2017-07-04 21:27:36.2141|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/print.css   
+2017-07-04 21:27:36.2141|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.2141|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 52.437ms 304 application/javascript 
+2017-07-04 21:27:36.2141|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.2141|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/print.css does not match an existing file 
+2017-07-04 21:27:36.2141|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/print.css was not modified 
+2017-07-04 21:27:36.2141|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/print.css 
+2017-07-04 21:27:36.2141|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6Q" completed keep alive response. 
+2017-07-04 21:27:36.2301|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 15.8128ms 304 text/css 
+2017-07-04 21:27:36.4546|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/v1/swagger.json   
+2017-07-04 21:27:36.4546|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:27:36.4546|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:27:36.4546|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/v1/swagger.json does not match an existing file 
+2017-07-04 21:27:37.2707|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6P" completed keep alive response. 
+2017-07-04 21:27:37.2707|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 817.4045ms 200 application/json 
+2017-07-04 21:28:29.1514|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/api/customers   
+2017-07-04 21:28:29.1514|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:28:29.1514|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-07-04 21:28:29.1979|2|Microsoft.AspNetCore.Mvc.Versioning.ApiVersionActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'eaa432f5-e85d-4013-967c-a08fd849ec3f' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-07-04 21:28:29.2254|3|Microsoft.AspNetCore.Mvc.Internal.MvcAttributeRouteHandler|DEBUG|No actions matched the current request 
+2017-07-04 21:28:29.2644|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-07-04 21:28:29.3054|2|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|INFO|Authorization failed for user: (null). 
+2017-07-04 21:28:29.3084|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+2017-07-04 21:28:29.3084|1|Microsoft.AspNetCore.Mvc.ChallengeResult|INFO|Executing ChallengeResult with authentication schemes (). 
+2017-07-04 21:28:29.3269|12|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|AuthenticationScheme: Bearer was challenged. 
+2017-07-04 21:28:29.3269|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 65.4555ms 
+2017-07-04 21:28:29.3404|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6S" completed keep alive response. 
+2017-07-04 21:28:29.3404|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 190.3818ms 401  
+2017-07-04 21:28:49.8064|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6R" received FIN. 
+2017-07-04 21:28:49.8064|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6Q" received FIN. 
+2017-07-04 21:28:49.8064|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6O" received FIN. 
+2017-07-04 21:28:49.8074|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6R" disconnecting. 
+2017-07-04 21:28:49.8064|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6P" received FIN. 
+2017-07-04 21:28:49.8074|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6Q" disconnecting. 
+2017-07-04 21:28:49.8304|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6P" disconnecting. 
+2017-07-04 21:28:49.8399|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6Q" sending FIN. 
+2017-07-04 21:28:49.8304|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/api/customers   
+2017-07-04 21:28:49.8074|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6N" received FIN. 
+2017-07-04 21:28:49.8549|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6R" sending FIN. 
+2017-07-04 21:28:49.8074|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6O" disconnecting. 
+2017-07-04 21:28:49.8549|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6O" sending FIN. 
+2017-07-04 21:28:49.8549|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6R" sent FIN with status "0". 
+2017-07-04 21:28:49.8549|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6O" sent FIN with status "0". 
+2017-07-04 21:28:49.8399|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6P" sending FIN. 
+2017-07-04 21:28:49.8549|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6N" disconnecting. 
+2017-07-04 21:28:49.8549|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6P" sent FIN with status "0". 
+2017-07-04 21:28:49.8549|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6O" stopped. 
+2017-07-04 21:28:49.8549|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6Q" sent FIN with status "0". 
+2017-07-04 21:28:49.8549|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6R" stopped. 
+2017-07-04 21:28:49.8549|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6P" stopped. 
+2017-07-04 21:28:49.8549|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6N" sending FIN. 
+2017-07-04 21:28:49.8549|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6Q" stopped. 
+2017-07-04 21:28:49.8549|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6N" sent FIN with status "0". 
+2017-07-04 21:28:49.8549|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6N" stopped. 
+2017-07-04 21:28:50.3204|2|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|Successfully validated the token. 
+2017-07-04 21:28:50.3264|3|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|HttpContext.User merged via AutomaticAuthentication from authenticationScheme: Bearer. 
+2017-07-04 21:28:50.3264|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-07-04 21:28:50.3264|2|Microsoft.AspNetCore.Mvc.Versioning.ApiVersionActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'eaa432f5-e85d-4013-967c-a08fd849ec3f' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-07-04 21:28:50.3264|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-07-04 21:28:50.3264|1|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|INFO|Authorization was successful for user: 123. 
+2017-07-04 21:28:50.5969|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.QueryParameters.CustomerQueryParameters) - ModelState is Valid 
+2017-07-04 21:28:50.7684|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'(from Customer <generated>_3 in DbSet<Customer>
+order by <generated>_3.Firstname asc
+order by <generated>_3.Firstname asc
+select <generated>_3)
+.Skip(__p_0)
+.Take(__p_1)' 
+2017-07-04 21:28:50.7864|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'(from Customer <generated>_3 in DbSet<Customer>
+order by <generated>_3.Firstname asc
+order by <generated>_3.Firstname asc
+select <generated>_3)
+.Skip(__p_0)
+.Take(__p_1)' 
+2017-07-04 21:28:50.8304|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+        ORDER BY [c].[Firstname]
+        OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-07-04 21:28:50.8304|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:28:50.8824|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (48ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c]
+ORDER BY [c].[Firstname]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2017-07-04 21:28:50.8824|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:28:50.8924|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'(from Customer <generated>_1 in DbSet<Customer>
+select <generated>_1)
+.Count()' 
+2017-07-04 21:28:50.8924|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'(from Customer <generated>_1 in DbSet<Customer>
+select <generated>_1)
+.Count()' 
+2017-07-04 21:28:50.9066|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<int> _ToSequence(
+    element: int GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT COUNT(*)
+                FROM [Customers] AS [c]
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+ 
+2017-07-04 21:28:50.9066|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:28:50.9446|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Customers] AS [c] 
+2017-07-04 21:28:50.9446|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:28:50.9601|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-07-04 21:28:50.9926|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-07-04 21:28:50.9976|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-07-04 21:28:50.9976|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-07-04 21:28:51.0636|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 728.5326ms 
+2017-07-04 21:28:51.0636|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6S" completed keep alive response. 
+2017-07-04 21:28:51.0636|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 1241.2777ms 200 application/json; charset=utf-8 
+2017-07-04 21:28:58.1666|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/api/customers2   
+2017-07-04 21:28:58.1666|2|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|Successfully validated the token. 
+2017-07-04 21:28:58.1666|3|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|HttpContext.User merged via AutomaticAuthentication from authenticationScheme: Bearer. 
+2017-07-04 21:28:58.1666|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers2'. 
+2017-07-04 21:28:58.1666|3|Microsoft.AspNetCore.Mvc.Internal.MvcAttributeRouteHandler|DEBUG|No actions matched the current request 
+2017-07-04 21:28:58.1666|5|Microsoft.AspNetCore.Mvc.Routing.DefaultApiVersionRoutePolicy|INFO|Multiple candidate actions were found, but none matched the requested service API version '1.0'. Candidate actions: packt_webapp.Controllers.Customers2Controller.GetAllCustomers (packt_webapp) 
+2017-07-04 21:28:58.1941|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-07-04 21:28:58.1941|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-07-04 21:28:58.1941|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ActionContext. 
+2017-07-04 21:28:58.1981|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6S" completed keep alive response. 
+2017-07-04 21:28:58.1981|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 32.5994ms 400 application/json; charset=utf-8 
+2017-07-04 21:29:10.0912|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/api/customers2   
+2017-07-04 21:29:10.0912|2|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|Successfully validated the token. 
+2017-07-04 21:29:10.0912|3|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|HttpContext.User merged via AutomaticAuthentication from authenticationScheme: Bearer. 
+2017-07-04 21:29:10.0912|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers2'. 
+2017-07-04 21:29:10.0912|3|Microsoft.AspNetCore.Mvc.Internal.MvcAttributeRouteHandler|DEBUG|No actions matched the current request 
+2017-07-04 21:29:10.0912|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.Customers2Controller.GetAllCustomers (packt_webapp) 
+2017-07-04 21:29:10.0912|1|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|INFO|Authorization was successful for user: 123. 
+2017-07-04 21:29:10.1227|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.Customers2Controller.GetAllCustomers (packt_webapp) with arguments (packt_webapp.QueryParameters.CustomerQueryParameters) - ModelState is Valid 
+2017-07-04 21:29:10.1227|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:29:10.1627|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (31ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c]
+ORDER BY [c].[Firstname]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2017-07-04 21:29:10.1627|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:29:10.1627|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:29:10.1922|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (25ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Customers] AS [c] 
+2017-07-04 21:29:10.1922|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:29:10.1922|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.Customers2Controller.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-07-04 21:29:10.1922|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-07-04 21:29:10.1922|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-07-04 21:29:10.1922|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-07-04 21:29:10.1977|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.Customers2Controller.GetAllCustomers (packt_webapp) in 99.9087ms 
+2017-07-04 21:29:10.1977|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6S" completed keep alive response. 
+2017-07-04 21:29:10.1977|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 107.9967ms 200 application/json; charset=utf-8 
+2017-07-04 21:29:53.5164|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/api/customers   
+2017-07-04 21:29:53.5254|2|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|Successfully validated the token. 
+2017-07-04 21:29:53.5254|3|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|HttpContext.User merged via AutomaticAuthentication from authenticationScheme: Bearer. 
+2017-07-04 21:29:53.5254|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-07-04 21:29:53.5254|2|Microsoft.AspNetCore.Mvc.Versioning.ApiVersionActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'eaa432f5-e85d-4013-967c-a08fd849ec3f' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-07-04 21:29:53.5254|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-07-04 21:29:53.5254|1|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|INFO|Authorization was successful for user: 123. 
+2017-07-04 21:29:53.5534|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.QueryParameters.CustomerQueryParameters) - ModelState is Valid 
+2017-07-04 21:29:53.5534|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:29:53.5864|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (29ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c]
+ORDER BY [c].[Firstname]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2017-07-04 21:29:53.5864|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:29:53.5879|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:29:53.6094|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Customers] AS [c] 
+2017-07-04 21:29:53.6094|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:29:53.6094|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-07-04 21:29:53.6094|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-07-04 21:29:53.6094|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-07-04 21:29:53.6094|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-07-04 21:29:53.6094|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 82.4929ms 
+2017-07-04 21:29:53.6204|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632ASM3B6S" completed keep alive response. 
+2017-07-04 21:29:53.6204|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 105.2727ms 200 application/json; charset=utf-8 
+2017-07-04 21:30:42.9251|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:30:43.2546|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:30:43.2831|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:30:43.4206|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (116ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+2017-07-04 21:30:43.4206|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:30:43.6666|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-07-04 21:30:43.6666|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-07-04 21:30:43.8846|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-07-04 21:30:43.9101|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:30:43.9471|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-07-04 21:30:44.0291|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:30:44.0541|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:30:44.0611|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-07-04 21:30:44.2136|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (75ms) [Parameters=[@p0='?', @p1='?', @p2='?', @p3='?', @p4='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p4;
+SELECT @@ROWCOUNT; 
+2017-07-04 21:30:44.2136|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-07-04 21:30:44.2136|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:30:44.2661|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:30:44.2661|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-07-04 21:30:44.3531|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (57ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000), @p8='?', @p9='?', @p10='?' (Size = 4000), @p11='?' (Size = 4000), @p12='?', @p13='?', @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?', @p17='?', @p18='?' (Size = 4000), @p19='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11),
+(@p12, @p13, @p14, @p15),
+(@p16, @p17, @p18, @p19); 
+2017-07-04 21:30:44.3806|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-07-04 21:30:44.3806|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:30:44.5126|3|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting starting 
+2017-07-04 21:30:44.6546|4|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting started 
+2017-07-04 21:30:44.8856|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6S" started. 
+2017-07-04 21:30:44.8856|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6R" started. 
+2017-07-04 21:30:44.9976|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:55869/  0 
+2017-07-04 21:30:44.9976|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/   
+2017-07-04 21:30:45.1106|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.1236|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6S" completed keep alive response. 
+2017-07-04 21:30:45.1371|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 154.5479ms 200  
+2017-07-04 21:30:45.4101|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.4211|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/ does not match a supported file type 
+2017-07-04 21:30:45.4601|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/index.html'. Physical path: 'N/A' 
+2017-07-04 21:30:45.5166|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6R" completed keep alive response. 
+2017-07-04 21:30:45.5166|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 545.476ms 200 text/html 
+2017-07-04 21:30:45.5166|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/typography.css   
+2017-07-04 21:30:45.5166|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/screen.css   
+2017-07-04 21:30:45.5266|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.5166|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6U" started. 
+2017-07-04 21:30:45.5166|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6T" started. 
+2017-07-04 21:30:45.5266|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.5266|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6V" started. 
+2017-07-04 21:30:45.5266|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ70" started. 
+2017-07-04 21:30:45.5266|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/screen.css does not match an existing file 
+2017-07-04 21:30:45.5166|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.5266|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/object-assign-pollyfill.js   
+2017-07-04 21:30:45.5266|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery-1.8.0.min.js   
+2017-07-04 21:30:45.5486|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.5486|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.5486|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.slideto.min.js   
+2017-07-04 21:30:45.5266|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/reset.css   
+2017-07-04 21:30:45.5486|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/screen.css was not modified 
+2017-07-04 21:30:45.5486|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.5486|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/typography.css does not match an existing file 
+2017-07-04 21:30:45.5486|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.5486|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery-1.8.0.min.js does not match an existing file 
+2017-07-04 21:30:45.5576|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/screen.css 
+2017-07-04 21:30:45.5576|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery-1.8.0.min.js was not modified 
+2017-07-04 21:30:45.5576|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6R" completed keep alive response. 
+2017-07-04 21:30:45.5576|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 48.012ms 304 text/css 
+2017-07-04 21:30:45.5576|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery-1.8.0.min.js 
+2017-07-04 21:30:45.5576|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6V" completed keep alive response. 
+2017-07-04 21:30:45.5576|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 37.3061ms 304 application/javascript 
+2017-07-04 21:30:45.5486|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.5486|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.5576|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/typography.css was not modified 
+2017-07-04 21:30:45.5796|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/typography.css 
+2017-07-04 21:30:45.5796|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6S" completed keep alive response. 
+2017-07-04 21:30:45.5796|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 63.0576ms 304 text/css 
+2017-07-04 21:30:45.5796|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.wiggle.min.js   
+2017-07-04 21:30:45.5796|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.ba-bbq.min.js   
+2017-07-04 21:30:45.5796|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.5796|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.5891|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.5891|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/handlebars-4.0.5.js   
+2017-07-04 21:30:45.5891|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.5891|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.5576|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.5891|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.wiggle.min.js does not match an existing file 
+2017-07-04 21:30:45.5891|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.ba-bbq.min.js does not match an existing file 
+2017-07-04 21:30:45.5796|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.5891|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.wiggle.min.js was not modified 
+2017-07-04 21:30:45.5796|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.5891|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/object-assign-pollyfill.js does not match an existing file 
+2017-07-04 21:30:45.6041|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/reset.css does not match an existing file 
+2017-07-04 21:30:45.5891|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.wiggle.min.js 
+2017-07-04 21:30:45.6041|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/object-assign-pollyfill.js was not modified 
+2017-07-04 21:30:45.6041|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/object-assign-pollyfill.js 
+2017-07-04 21:30:45.5891|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.slideto.min.js does not match an existing file 
+2017-07-04 21:30:45.6041|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/reset.css was not modified 
+2017-07-04 21:30:45.5891|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.6041|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/handlebars-4.0.5.js does not match an existing file 
+2017-07-04 21:30:45.6041|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/handlebars-4.0.5.js was not modified 
+2017-07-04 21:30:45.6041|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/reset.css 
+2017-07-04 21:30:45.6041|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6R" completed keep alive response. 
+2017-07-04 21:30:45.6041|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.slideto.min.js was not modified 
+2017-07-04 21:30:45.5891|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.ba-bbq.min.js was not modified 
+2017-07-04 21:30:45.6041|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6T" completed keep alive response. 
+2017-07-04 21:30:45.6196|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 89.5086ms 304 application/javascript 
+2017-07-04 21:30:45.6196|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/backbone-min.js   
+2017-07-04 21:30:45.6041|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/handlebars-4.0.5.js 
+2017-07-04 21:30:45.6196|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6S" completed keep alive response. 
+2017-07-04 21:30:45.6041|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6U" completed keep alive response. 
+2017-07-04 21:30:45.6041|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.slideto.min.js 
+2017-07-04 21:30:45.6196|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ70" completed keep alive response. 
+2017-07-04 21:30:45.6356|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 86.8543ms 304 application/javascript 
+2017-07-04 21:30:45.6196|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 104.0006ms 304 text/css 
+2017-07-04 21:30:45.6196|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.6356|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/swagger-ui.min.js   
+2017-07-04 21:30:45.6356|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.6196|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.ba-bbq.min.js 
+2017-07-04 21:30:45.6041|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 37.4712ms 304 application/javascript 
+2017-07-04 21:30:45.6356|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/lodash.min.js   
+2017-07-04 21:30:45.6356|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack_extended.js   
+2017-07-04 21:30:45.6356|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.6356|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.6196|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 42.7264ms 304 application/javascript 
+2017-07-04 21:30:45.6506|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/swagger-ui.min.js does not match an existing file 
+2017-07-04 21:30:45.6506|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /swagger-ui.min.js was not modified 
+2017-07-04 21:30:45.6356|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6V" completed keep alive response. 
+2017-07-04 21:30:45.6506|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 79.5732ms 304 application/javascript 
+2017-07-04 21:30:45.6506|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jsoneditor.min.js   
+2017-07-04 21:30:45.6506|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/backbone-min.js does not match an existing file 
+2017-07-04 21:30:45.6661|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.6506|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack.js   
+2017-07-04 21:30:45.6661|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/backbone-min.js was not modified 
+2017-07-04 21:30:45.6506|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /swagger-ui.min.js 
+2017-07-04 21:30:45.6661|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6U" completed keep alive response. 
+2017-07-04 21:30:45.6356|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.6661|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/backbone-min.js 
+2017-07-04 21:30:45.6356|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.6661|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 33.2012ms 304 application/javascript 
+2017-07-04 21:30:45.6841|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/marked.js   
+2017-07-04 21:30:45.6841|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.6661|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.6661|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6T" completed keep alive response. 
+2017-07-04 21:30:45.6841|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 68.9695ms 304 application/javascript 
+2017-07-04 21:30:45.6841|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/swagger-oauth.js   
+2017-07-04 21:30:45.6841|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.6661|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.6996|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.6996|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack_extended.js does not match an existing file 
+2017-07-04 21:30:45.6996|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.6841|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.6996|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/lodash.min.js does not match an existing file 
+2017-07-04 21:30:45.6996|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/marked.js does not match an existing file 
+2017-07-04 21:30:45.6996|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.6996|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.6996|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/highlight.9.1.0.pack_extended.js was not modified 
+2017-07-04 21:30:45.7146|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/lodash.min.js was not modified 
+2017-07-04 21:30:45.7146|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/lodash.min.js 
+2017-07-04 21:30:45.7146|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/swagger-oauth.js does not match an existing file 
+2017-07-04 21:30:45.6996|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jsoneditor.min.js does not match an existing file 
+2017-07-04 21:30:45.7146|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/marked.js was not modified 
+2017-07-04 21:30:45.7296|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/marked.js 
+2017-07-04 21:30:45.7296|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6U" completed keep alive response. 
+2017-07-04 21:30:45.7146|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack.js does not match an existing file 
+2017-07-04 21:30:45.7296|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/highlight.9.1.0.pack.js was not modified 
+2017-07-04 21:30:45.7146|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/highlight.9.1.0.pack_extended.js 
+2017-07-04 21:30:45.7146|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6R" completed keep alive response. 
+2017-07-04 21:30:45.7296|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 98.8026ms 304 application/javascript 
+2017-07-04 21:30:45.7296|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/swagger-oauth.js was not modified 
+2017-07-04 21:30:45.7296|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 51.6951ms 304 application/javascript 
+2017-07-04 21:30:45.7296|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jsoneditor.min.js was not modified 
+2017-07-04 21:30:45.7296|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/highlight.9.1.0.pack.js 
+2017-07-04 21:30:45.7296|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ70" completed keep alive response. 
+2017-07-04 21:30:45.7486|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jsoneditor.min.js 
+2017-07-04 21:30:45.7486|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 108.9661ms 304 application/javascript 
+2017-07-04 21:30:45.7486|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6S" completed keep alive response. 
+2017-07-04 21:30:45.7661|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 112.7371ms 304 application/javascript 
+2017-07-04 21:30:45.7486|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6V" completed keep alive response. 
+2017-07-04 21:30:45.7486|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/swagger-oauth.js 
+2017-07-04 21:30:45.7661|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 106.0799ms 304 application/javascript 
+2017-07-04 21:30:45.7661|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6T" completed keep alive response. 
+2017-07-04 21:30:45.7661|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/images/logo_small.png   
+2017-07-04 21:30:45.7661|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.7661|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 81.1476ms 304 application/javascript 
+2017-07-04 21:30:45.7661|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.7761|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/images/logo_small.png does not match an existing file 
+2017-07-04 21:30:45.7761|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /images/logo_small.png was not modified 
+2017-07-04 21:30:45.7761|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /images/logo_small.png 
+2017-07-04 21:30:45.7761|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6R" completed keep alive response. 
+2017-07-04 21:30:45.7761|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 9.5206ms 304 image/png 
+2017-07-04 21:30:45.7761|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/print.css   
+2017-07-04 21:30:45.7761|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.7761|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.7761|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/print.css does not match an existing file 
+2017-07-04 21:30:45.7761|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/print.css was not modified 
+2017-07-04 21:30:45.7761|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/print.css 
+2017-07-04 21:30:45.7916|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6U" completed keep alive response. 
+2017-07-04 21:30:45.7916|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 8.8269ms 304 text/css 
+2017-07-04 21:30:45.9822|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/v1/swagger.json   
+2017-07-04 21:30:45.9822|7|IdentityServer4.AccessTokenValidation.Infrastructure.NopAuthenticationMiddleware|INFO|Bearer was not authenticated. Failure message: No token found. 
+2017-07-04 21:30:45.9822|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-07-04 21:30:45.9822|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/v1/swagger.json does not match an existing file 
+2017-07-04 21:30:46.7927|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ70" completed keep alive response. 
+2017-07-04 21:30:46.7927|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 811.2485ms 200 application/json 
+2017-07-04 21:30:52.7140|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/api/customers   
+2017-07-04 21:30:53.8435|1|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|Failed to validate the token eyJhbGciOiJSUzI1NiIsImtpZCI6ImY1ODI2ZDFkY2IyYTdjMTRkMjc2MGJhN2UwOTkzMDQ0IiwidHlwIjoiSldUIn0.eyJuYmYiOjE0OTkxOTY1MTQsImV4cCI6MTQ5OTIwMDExNCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1NzIyOSIsImF1ZCI6WyJodHRwOi8vbG9jYWxob3N0OjU3MjI5L3Jlc291cmNlcyIsInJlc291cmNlc1Njb3BlIl0sImNsaWVudF9pZCI6InBvc3RtYW5DbGllbnQiLCJzdWIiOiIxMjMiLCJhdXRoX3RpbWUiOjE0OTkxOTY1MTQsImlkcCI6ImxvY2FsIiwicm9sZSI6WyJyZXNvdXJjZXMudXNlciIsInJlc291cmNlcy5hZG1pbiJdLCJ1c2VybmFtZSI6InBvc3RtYW5hZG1pbiIsImVtYWlsIjoicG9zdG1hbmFkbWluQGVtYWlsLmNoIiwic2NvcGUiOlsicmVzb3VyY2VzU2NvcGUiXSwiYW1yIjpbInB3ZCJdfQ.rOqlYslFpnsGyujd5kxcwbKfqX1MTIcXt37E01ljN_aTDRU3ON-cpgwi9sytFlI7-Uo_UwIHFAzTkW44fMcaq1LPa2p4TFPavZSNHHPGiGJGlNNSuaW4QOdPXJx59aOfe0WzO3KwPrxeORGpveB3ieCrFIMTr9jJDE4DvzdoTLD1Crx2nzXxt2BE6FQGmd1ePKi4SLojhglIRdwqbaMjKFQDezZd3jukE9SrQSvPqAmeNJChIFHuuRxbcEbkVQ8kAFxjAfITjI3S6fNeN1gegRhBmjy5vcFmbI__NVWTy91Wk7dwR3jzlP1Qn3EujXbIHiuJhk9V0-SW23NYchgiSw. IDX10501: Signature validation failed. Unable to match 'kid': 'f5826d1dcb2a7c14d2760ba7e0993044', 
+token: '{"alg":"RS256","typ":"JWT","kid":"f5826d1dcb2a7c14d2760ba7e0993044"}.{"nbf":1499196514,"exp":1499200114,"iss":"http://localhost:57229","aud":["http://localhost:57229/resources","resourcesScope"],"client_id":"postmanClient","sub":"123","auth_time":1499196514,"idp":"local","role":["resources.user","resources.admin"],"username":"postmanadmin","email":"postmanadmin@email.ch","scope":["resourcesScope"],"amr":["pwd"]}'.
+2017-07-04 21:30:53.8435|7|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|Bearer was not authenticated. Failure message: IDX10501: Signature validation failed. Unable to match 'kid': 'f5826d1dcb2a7c14d2760ba7e0993044', 
+token: '{"alg":"RS256","typ":"JWT","kid":"f5826d1dcb2a7c14d2760ba7e0993044"}.{"nbf":1499196514,"exp":1499200114,"iss":"http://localhost:57229","aud":["http://localhost:57229/resources","resourcesScope"],"client_id":"postmanClient","sub":"123","auth_time":1499196514,"idp":"local","role":["resources.user","resources.admin"],"username":"postmanadmin","email":"postmanadmin@email.ch","scope":["resourcesScope"],"amr":["pwd"]}'. 
+2017-07-04 21:30:53.8435|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-07-04 21:30:53.8790|2|Microsoft.AspNetCore.Mvc.Versioning.ApiVersionActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id '2cf42f24-ae98-4489-b2ab-9e930b660457' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-07-04 21:30:53.9080|3|Microsoft.AspNetCore.Mvc.Internal.MvcAttributeRouteHandler|DEBUG|No actions matched the current request 
+2017-07-04 21:30:53.9455|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-07-04 21:30:53.9800|2|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|INFO|Authorization failed for user: (null). 
+2017-07-04 21:30:53.9800|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'. 
+2017-07-04 21:30:53.9800|1|Microsoft.AspNetCore.Mvc.ChallengeResult|INFO|Executing ChallengeResult with authentication schemes (). 
+2017-07-04 21:30:54.0155|12|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|AuthenticationScheme: Bearer was challenged. 
+2017-07-04 21:30:54.0155|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 71.6973ms 
+2017-07-04 21:30:54.0155|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6S" completed keep alive response. 
+2017-07-04 21:30:54.0280|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 1313.7897ms 401  
+2017-07-04 21:31:20.3713|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/api/customers   
+2017-07-04 21:31:20.3953|2|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|Successfully validated the token. 
+2017-07-04 21:31:20.4013|3|Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerMiddleware|INFO|HttpContext.User merged via AutomaticAuthentication from authenticationScheme: Bearer. 
+2017-07-04 21:31:20.4013|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-07-04 21:31:20.4013|2|Microsoft.AspNetCore.Mvc.Versioning.ApiVersionActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id '2cf42f24-ae98-4489-b2ab-9e930b660457' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-07-04 21:31:20.4013|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-07-04 21:31:20.4013|1|Microsoft.AspNetCore.Authorization.DefaultAuthorizationService|INFO|Authorization was successful for user: 123. 
+2017-07-04 21:31:20.6053|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.QueryParameters.CustomerQueryParameters) - ModelState is Valid 
+2017-07-04 21:31:20.7778|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'(from Customer <generated>_3 in DbSet<Customer>
+order by <generated>_3.Firstname asc
+order by <generated>_3.Firstname asc
+select <generated>_3)
+.Skip(__p_0)
+.Take(__p_1)' 
+2017-07-04 21:31:20.7953|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'(from Customer <generated>_3 in DbSet<Customer>
+order by <generated>_3.Firstname asc
+order by <generated>_3.Firstname asc
+select <generated>_3)
+.Skip(__p_0)
+.Take(__p_1)' 
+2017-07-04 21:31:20.8313|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+        ORDER BY [c].[Firstname]
+        OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-07-04 21:31:20.8313|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:31:20.8698|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (35ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c]
+ORDER BY [c].[Firstname]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2017-07-04 21:31:20.8698|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:31:20.8698|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'(from Customer <generated>_1 in DbSet<Customer>
+select <generated>_1)
+.Count()' 
+2017-07-04 21:31:20.8698|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'(from Customer <generated>_1 in DbSet<Customer>
+select <generated>_1)
+.Count()' 
+2017-07-04 21:31:20.8928|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<int> _ToSequence(
+    element: int GetResult(
+        valueBuffers: IEnumerable<ValueBuffer> _Query(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT COUNT(*)
+                FROM [Customers] AS [c]
+            , 
+            queryIndex: default(System.Nullable`1[System.Int32])
+        )
+    )
+)
+ 
+2017-07-04 21:31:20.8928|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:31:20.9183|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Customers] AS [c] 
+2017-07-04 21:31:20.9183|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server 'localhost\SQLEXPRESS'. 
+2017-07-04 21:31:20.9348|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-07-04 21:31:20.9618|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-07-04 21:31:20.9668|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-07-04 21:31:20.9668|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-07-04 21:31:21.0213|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 613.0654ms 
+2017-07-04 21:31:21.0283|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6V" completed keep alive response. 
+2017-07-04 21:31:21.0283|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 658.5888ms 200 application/json; charset=utf-8 
+2017-07-04 21:32:34.8654|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6T" received FIN. 
+2017-07-04 21:32:34.8654|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6S" received FIN. 
+2017-07-04 21:32:34.8654|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6U" received FIN. 
+2017-07-04 21:32:34.8744|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6V" received FIN. 
+2017-07-04 21:32:34.9094|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6U" disconnecting. 
+2017-07-04 21:32:34.9094|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6S" disconnecting. 
+2017-07-04 21:32:34.9379|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6S" sending FIN. 
+2017-07-04 21:32:34.9094|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6T" disconnecting. 
+2017-07-04 21:32:34.9379|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6T" sending FIN. 
+2017-07-04 21:32:34.9094|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6V" disconnecting. 
+2017-07-04 21:32:34.8654|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6R" received FIN. 
+2017-07-04 21:32:34.9379|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ70" received FIN. 
+2017-07-04 21:32:34.9379|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ70" disconnecting. 
+2017-07-04 21:32:34.9379|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6R" disconnecting. 
+2017-07-04 21:32:34.9379|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6T" sent FIN with status "0". 
+2017-07-04 21:32:34.9379|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6U" sending FIN. 
+2017-07-04 21:32:34.9719|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6U" sent FIN with status "0". 
+2017-07-04 21:32:34.9379|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6S" sent FIN with status "0". 
+2017-07-04 21:32:34.9719|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ70" sending FIN. 
+2017-07-04 21:32:34.9849|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6R" sending FIN. 
+2017-07-04 21:32:34.9849|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6S" stopped. 
+2017-07-04 21:32:34.9849|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6R" sent FIN with status "0". 
+2017-07-04 21:32:34.9849|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6V" sending FIN. 
+2017-07-04 21:32:34.9849|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6V" sent FIN with status "0". 
+2017-07-04 21:32:34.9849|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6R" stopped. 
+2017-07-04 21:32:34.9849|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6T" stopped. 
+2017-07-04 21:32:34.9849|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6U" stopped. 
+2017-07-04 21:32:34.9849|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ6V" stopped. 
+2017-07-04 21:32:34.9849|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ70" sent FIN with status "0". 
+2017-07-04 21:32:34.9980|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL632CL5UJ70" stopped. 

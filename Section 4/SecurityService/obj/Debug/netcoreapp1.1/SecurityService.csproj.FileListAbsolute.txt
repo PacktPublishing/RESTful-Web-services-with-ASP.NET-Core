@@ -1,0 +1,9 @@
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\SecurityService\bin\Debug\netcoreapp1.1\SecurityService.deps.json
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\SecurityService\bin\Debug\netcoreapp1.1\SecurityService.runtimeconfig.json
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\SecurityService\bin\Debug\netcoreapp1.1\SecurityService.runtimeconfig.dev.json
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\SecurityService\bin\Debug\netcoreapp1.1\SecurityService.dll
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\SecurityService\obj\Debug\netcoreapp1.1\SecurityService.AssemblyInfo.cs
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\SecurityService\bin\Debug\netcoreapp1.1\SecurityService.pdb
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\SecurityService\obj\Debug\netcoreapp1.1\SecurityService.dll
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\SecurityService\obj\Debug\netcoreapp1.1\SecurityService.pdb
+C:\Users\Fabian\documents\visual studio 2017\Projects\Packt_Webapp\SecurityService\obj\Debug\netcoreapp1.1\SecurityService.csprojResolveAssemblyReference.cache

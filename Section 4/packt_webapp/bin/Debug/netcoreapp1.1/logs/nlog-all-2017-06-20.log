@@ -1,0 +1,1457 @@
+2017-06-20 18:20:33.2943|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:20:34.2635|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:20:34.2815|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:20:34.5615|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (233ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+2017-06-20 18:20:34.5615|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:20:35.1616|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 18:20:35.1796|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 18:20:35.6157|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-06-20 18:20:35.7257|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:20:35.7607|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (17ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-06-20 18:20:35.9378|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:20:36.0608|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:20:36.0928|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 18:20:36.4558|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (178ms) [Parameters=[@p0='?', @p1='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT; 
+2017-06-20 18:20:36.4758|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 18:20:36.4888|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:20:36.5549|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:20:36.5729|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 18:20:36.7389|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (124ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7); 
+2017-06-20 18:20:36.7389|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 18:20:36.7389|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:20:37.4200|3|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting starting 
+2017-06-20 18:20:37.8311|4|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting started 
+2017-06-20 18:20:51.8744|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV18T59RF" started. 
+2017-06-20 18:20:52.1190|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers   
+2017-06-20 18:20:52.1805|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:20:53.1136|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:20:53.1535|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'e6ee000e-20cc-43aa-b965-bac31c2af9dd' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:20:53.3536|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:20:53.7377|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments ((null)) - ModelState is Valid 
+2017-06-20 18:21:00.3168|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer s in DbSet<Customer>
+order by object PropertyInfo GetProperty(
+    type: Type s.GetType()
+    , 
+    name: "Firstname"
+)
+.GetValue(
+    obj: s
+)
+ asc
+select s' 
+2017-06-20 18:21:00.3268|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer s in DbSet<Customer>
+order by object PropertyInfo GetProperty(
+    type: Type s.GetType()
+    , 
+    name: "Firstname"
+)
+.GetValue(
+    obj: s
+)
+ asc
+select s' 
+2017-06-20 18:21:00.3948|8|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|WARN|The LINQ expression 'orderby GetProperty([s].GetType(), "Firstname").GetValue([s]) asc' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider. 
+2017-06-20 18:21:00.4108|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IOrderedEnumerable<Customer> _OrderBy(
+    source: IEnumerable<Customer> _ShapedQuery(
+        queryContext: queryContext, 
+        shaperCommandContext: SelectExpression: 
+            SELECT [s].[Id], [s].[Age], [s].[Firstname], [s].[Lastname]
+            FROM [Customers] AS [s]
+        , 
+        shaper: UnbufferedEntityShaper<Customer>
+    )
+    , 
+    expression: (Customer s) => object PropertyInfo GetProperty(
+        type: Type s.GetType()
+        , 
+        name: "Firstname"
+    )
+    .GetValue(
+        obj: s
+    )
+    , 
+    orderingDirection: Asc
+)
+ 
+2017-06-20 18:21:00.4108|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:21:00.4788|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (52ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [s].[Id], [s].[Age], [s].[Firstname], [s].[Lastname]
+FROM [Customers] AS [s] 
+2017-06-20 18:21:00.4818|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:21:14.0514|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-06-20 18:21:14.1294|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-06-20 18:21:14.1604|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-06-20 18:21:14.1604|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-06-20 18:21:15.1506|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 21775.9284ms 
+2017-06-20 18:21:15.1776|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV18T59RF" completed keep alive response. 
+2017-06-20 18:21:15.1906|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 23088.7889ms 200 application/json; charset=utf-8 
+2017-06-20 18:21:15.9278|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/favicon.ico   
+2017-06-20 18:21:15.9278|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /favicon.ico does not match an existing file 
+2017-06-20 18:21:15.9448|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-06-20 18:21:15.9638|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV18T59RF" completed keep alive response. 
+2017-06-20 18:21:15.9668|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 39.3913ms 404  
+2017-06-20 18:33:22.7797|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:33:23.0529|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:33:23.0699|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:33:23.1779|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (90ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+2017-06-20 18:33:23.1779|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:33:23.3441|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 18:33:23.3441|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 18:33:23.4611|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-06-20 18:33:23.4791|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:33:23.5041|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-06-20 18:33:23.5590|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:33:23.5810|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:33:23.5810|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 18:33:23.7259|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (62ms) [Parameters=[@p0='?', @p1='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT; 
+2017-06-20 18:33:23.7329|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 18:33:23.7329|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:33:23.7819|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:33:23.7819|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 18:33:23.8764|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (66ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7); 
+2017-06-20 18:33:23.8764|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 18:33:23.8764|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:33:24.0724|3|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting starting 
+2017-06-20 18:33:24.2054|4|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting started 
+2017-06-20 18:33:36.1740|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV8CM4RCO" started. 
+2017-06-20 18:33:36.2660|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers   
+2017-06-20 18:33:36.2970|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:33:36.4770|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:33:36.4990|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id '38c7e034-6a93-4c43-a759-8e50c8f7a8df' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:33:36.5296|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:33:36.7292|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:33:54.3314|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'(from Customer x in DbSet<Customer>
+order by x.Id asc
+select x)
+.Skip(__p_0)
+.Take(__p_1)' 
+2017-06-20 18:33:54.3434|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'(from Customer x in DbSet<Customer>
+order by x.Id asc
+select x)
+.Skip(__p_0)
+.Take(__p_1)' 
+2017-06-20 18:33:54.3694|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+        FROM [Customers] AS [x]
+        ORDER BY [x].[Id]
+        OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-06-20 18:33:54.3694|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:33:54.4094|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (37ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x]
+ORDER BY [x].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2017-06-20 18:33:54.5169|1|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|ERROR|An exception occurred in the database while iterating the results of a query.
+System.Data.SqlClient.SqlException: The offset specified in a OFFSET clause may not be negative.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at System.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at System.Data.SqlClient.SqlDataReader.Read()
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable.Enumerator.BufferlessMoveNext(Boolean buffer)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](Func`2 operation, Func`2 verifySucceeded, TState state)
+   at Microsoft.EntityFrameworkCore.Query.QueryMethodProvider.<_ShapedQuery>d__3`1.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.<_TrackEntities>d__15`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:97379e1e-ec66-4bcb-9638-45ff91df764b
+Error Number:10742,State:1,Class:15 The offset specified in a OFFSET clause may not be negative.
+2017-06-20 18:34:18.5344|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:18.7982|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:18.8147|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:18.9197|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (87ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+2017-06-20 18:34:18.9197|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:19.0847|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 18:34:19.0932|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 18:34:19.1982|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-06-20 18:34:19.2163|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:19.2432|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-06-20 18:34:19.2992|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:19.3187|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:19.3257|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 18:34:19.4347|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (49ms) [Parameters=[@p0='?', @p1='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT; 
+2017-06-20 18:34:19.4347|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 18:34:19.4347|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:19.4787|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:19.4827|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 18:34:19.5495|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (44ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7); 
+2017-06-20 18:34:19.5495|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 18:34:19.5495|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:19.7396|3|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting starting 
+2017-06-20 18:34:19.8446|4|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting started 
+2017-06-20 18:34:23.7216|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV8QRITKD" started. 
+2017-06-20 18:34:23.8111|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers   
+2017-06-20 18:34:23.8406|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:34:24.0196|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:34:24.0416|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'f0f829f9-f293-4666-ab8a-5ce24310286f' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:34:24.0716|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:34:24.2717|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:34:25.8385|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'(from Customer x in DbSet<Customer>
+order by x.Id asc
+select x)
+.Skip(__p_0)
+.Take(__p_1)' 
+2017-06-20 18:34:25.8505|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'(from Customer x in DbSet<Customer>
+order by x.Id asc
+select x)
+.Skip(__p_0)
+.Take(__p_1)' 
+2017-06-20 18:34:25.8755|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+        FROM [Customers] AS [x]
+        ORDER BY [x].[Id]
+        OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-06-20 18:34:25.8755|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:25.8965|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (18ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x]
+ORDER BY [x].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2017-06-20 18:34:25.8965|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:25.8965|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-06-20 18:34:25.9245|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-06-20 18:34:25.9245|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-06-20 18:34:25.9245|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-06-20 18:34:26.1686|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 2091.7285ms 
+2017-06-20 18:34:26.1786|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV8QRITKD" completed keep alive response. 
+2017-06-20 18:34:26.1866|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 2394.4187ms 200 application/json; charset=utf-8 
+2017-06-20 18:34:48.1490|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers?page=1&pagesize=1   
+2017-06-20 18:34:48.1490|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:34:48.1490|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:34:48.1490|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'f0f829f9-f293-4666-ab8a-5ce24310286f' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:34:48.1490|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:34:48.1895|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:34:54.4472|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:54.4692|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (16ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x]
+ORDER BY [x].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2017-06-20 18:34:54.4692|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:34:54.4692|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-06-20 18:34:54.4692|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-06-20 18:34:54.4692|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-06-20 18:34:54.4692|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-06-20 18:34:54.4692|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 6321.5812ms 
+2017-06-20 18:34:54.4872|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV8QRITKD" completed keep alive response. 
+2017-06-20 18:34:54.4872|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 6339.8459ms 200 application/json; charset=utf-8 
+2017-06-20 18:35:03.1629|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers?page=1&pagecount=1   
+2017-06-20 18:35:03.1629|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:35:03.1629|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:35:03.1629|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'f0f829f9-f293-4666-ab8a-5ce24310286f' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:35:03.1629|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:35:03.1909|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:35:07.5367|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:07.5699|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (28ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x]
+ORDER BY [x].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2017-06-20 18:35:07.5699|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:07.5699|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-06-20 18:35:07.5699|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-06-20 18:35:07.5699|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-06-20 18:35:07.5699|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-06-20 18:35:07.5761|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 4408.3839ms 
+2017-06-20 18:35:07.5761|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV8QRITKD" completed keep alive response. 
+2017-06-20 18:35:07.5761|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 4416.7621ms 200 application/json; charset=utf-8 
+2017-06-20 18:35:13.0909|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers?page=2&pagecount=1   
+2017-06-20 18:35:13.0909|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:35:13.0909|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:35:13.0909|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'f0f829f9-f293-4666-ab8a-5ce24310286f' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:35:13.0909|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:35:13.1159|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:35:14.6796|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:14.7166|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (32ms) [Parameters=[@__p_0='?', @__p_1='?'], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x]
+ORDER BY [x].[Id]
+OFFSET @__p_0 ROWS FETCH NEXT @__p_1 ROWS ONLY 
+2017-06-20 18:35:14.7166|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:14.7166|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-06-20 18:35:14.7166|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-06-20 18:35:14.7166|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-06-20 18:35:14.7166|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-06-20 18:35:14.7166|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 1627.5759ms 
+2017-06-20 18:35:14.7166|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV8QRITKD" completed keep alive response. 
+2017-06-20 18:35:14.7166|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 1634.7036ms 200 application/json; charset=utf-8 
+2017-06-20 18:35:27.0597|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers?page=2&pagecount=1&filter=chuck   
+2017-06-20 18:35:27.0597|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:35:27.0597|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:35:27.0597|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'f0f829f9-f293-4666-ab8a-5ce24310286f' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:35:27.0597|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:35:27.0797|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:35:54.2268|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:54.5118|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:54.5278|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:54.6337|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (88ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+2017-06-20 18:35:54.6337|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:54.7952|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 18:35:54.7952|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 18:35:54.9118|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-06-20 18:35:54.9318|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:54.9568|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-06-20 18:35:55.0124|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:55.0324|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:55.0324|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 18:35:55.1455|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (48ms) [Parameters=[@p0='?', @p1='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT; 
+2017-06-20 18:35:55.1455|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 18:35:55.1565|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:55.1890|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:55.1890|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 18:35:55.2656|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (51ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7); 
+2017-06-20 18:35:55.2656|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 18:35:55.2656|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:35:55.4447|3|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting starting 
+2017-06-20 18:35:55.5839|4|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting started 
+2017-06-20 18:36:00.8553|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV9NPU2MF" started. 
+2017-06-20 18:36:00.9463|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers?page=2&pagecount=1&filter=chuck   
+2017-06-20 18:36:00.9768|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:36:01.1553|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:36:01.1773|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'e4703bb8-b3bf-4e27-9849-03fb8f21abda' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:36:01.2093|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:36:01.4095|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:36:04.5321|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'(from Customer x in DbSet<Customer>
+where bool string x.Firstname.ToLowerInvariant()
+.Contains(
+    value: __customerqueryParameters_Filter_0
+)
+ || bool string x.Firstname.ToLowerInvariant()
+.Contains(
+    value: __customerqueryParameters_Filter_1
+)
+
+order by x.Id asc
+select x)
+.Skip(__p_2)
+.Take(__p_3)' 
+2017-06-20 18:36:04.5501|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'(from Customer x in DbSet<Customer>
+where bool string x.Firstname.ToLowerInvariant()
+.Contains(
+    value: __customerqueryParameters_Filter_0
+)
+ || bool string x.Firstname.ToLowerInvariant()
+.Contains(
+    value: __customerqueryParameters_Filter_1
+)
+
+order by x.Id asc
+select x)
+.Skip(__p_2)
+.Take(__p_3)' 
+2017-06-20 18:36:04.6041|8|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|WARN|The LINQ expression '([x].Firstname.ToLowerInvariant().Contains(__customerqueryParameters_Filter_0) OrElse [x].Firstname.ToLowerInvariant().Contains(__customerqueryParameters_Filter_1))' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider. 
+2017-06-20 18:36:04.6221|8|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|WARN|The LINQ expression 'Skip(__p_2)' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider. 
+2017-06-20 18:36:04.6221|8|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|WARN|The LINQ expression 'Take(__p_3)' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider. 
+2017-06-20 18:36:04.6221|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> Take(
+    source: IEnumerable<Customer> Skip(
+        source: IEnumerable<Customer> _Where(
+            source: IEnumerable<Customer> _ShapedQuery(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+                    FROM [Customers] AS [x]
+                    ORDER BY [x].[Id]
+                , 
+                shaper: UnbufferedEntityShaper<Customer>
+            )
+            , 
+            predicate: (Customer x) => bool string x.Firstname.ToLowerInvariant()
+            .Contains(
+                value: string GetParameterValue(
+                    queryContext: queryContext, 
+                    parameterName: "__customerqueryParameters_Filter_0"
+                )
+            )
+             || bool string x.Firstname.ToLowerInvariant()
+            .Contains(
+                value: string GetParameterValue(
+                    queryContext: queryContext, 
+                    parameterName: "__customerqueryParameters_Filter_1"
+                )
+            )
+        )
+        , 
+        count: int GetParameterValue(
+            queryContext: queryContext, 
+            parameterName: "__p_2"
+        )
+    )
+    , 
+    count: int GetParameterValue(
+        queryContext: queryContext, 
+        parameterName: "__p_3"
+    )
+)
+ 
+2017-06-20 18:36:04.6401|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:36:04.6611|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x]
+ORDER BY [x].[Id] 
+2017-06-20 18:36:04.6611|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:36:52.2821|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:36:52.3161|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (26ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x]
+ORDER BY [x].[Id] 
+2017-06-20 18:36:52.3161|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:36:52.3161|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-06-20 18:36:52.3446|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-06-20 18:36:52.3446|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-06-20 18:36:52.3446|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-06-20 18:36:52.5536|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 51340.3744ms 
+2017-06-20 18:36:52.5616|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV9NPU2MF" completed keep alive response. 
+2017-06-20 18:36:52.5616|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 51641.8935ms 200 application/json; charset=utf-8 
+2017-06-20 18:37:11.6994|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers?page=1&pagecount=1&filter=chuck   
+2017-06-20 18:37:11.7014|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:37:11.7014|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:37:11.7014|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'e4703bb8-b3bf-4e27-9849-03fb8f21abda' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:37:11.7014|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:37:11.7284|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:37:13.0500|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:13.0755|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (20ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x]
+ORDER BY [x].[Id] 
+2017-06-20 18:37:13.0755|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:13.0755|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-06-20 18:37:13.0755|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-06-20 18:37:13.0755|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-06-20 18:37:13.0755|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-06-20 18:37:13.1376|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 1430.5974ms 
+2017-06-20 18:37:13.1376|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV9NPU2MF" completed keep alive response. 
+2017-06-20 18:37:13.1376|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 1440.7324ms 200 application/json; charset=utf-8 
+2017-06-20 18:37:20.8471|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers?page=1&pagecount=1&filter=Chuck   
+2017-06-20 18:37:20.8471|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:37:20.8471|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:37:20.8471|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'e4703bb8-b3bf-4e27-9849-03fb8f21abda' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:37:20.8471|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:37:20.8721|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:37:23.9496|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:23.9826|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x]
+ORDER BY [x].[Id] 
+2017-06-20 18:37:23.9826|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:23.9826|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-06-20 18:37:23.9826|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-06-20 18:37:23.9826|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-06-20 18:37:23.9826|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-06-20 18:37:23.9826|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 3136.9479ms 
+2017-06-20 18:37:23.9826|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NV9NPU2MF" completed keep alive response. 
+2017-06-20 18:37:23.9826|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 3145.5257ms 200 application/json; charset=utf-8 
+2017-06-20 18:37:58.9268|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:59.1879|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:59.2039|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:59.3301|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (108ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+2017-06-20 18:37:59.3301|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:59.4971|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 18:37:59.4971|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 18:37:59.6136|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-06-20 18:37:59.6321|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:59.6573|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-06-20 18:37:59.7303|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:59.7514|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:59.7514|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 18:37:59.8733|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (51ms) [Parameters=[@p0='?', @p1='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT; 
+2017-06-20 18:37:59.8733|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 18:37:59.8733|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:59.9183|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:37:59.9213|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 18:37:59.9903|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (46ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7); 
+2017-06-20 18:37:59.9903|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 18:37:59.9973|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:38:00.1794|3|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting starting 
+2017-06-20 18:38:00.2924|4|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting started 
+2017-06-20 18:38:11.1052|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NVAUK2SAA" started. 
+2017-06-20 18:38:11.2012|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers?page=1&pagecount=1&filter=Chuck   
+2017-06-20 18:38:11.2342|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:38:11.4152|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:38:11.4372|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'ac520707-2e8c-427e-90e4-c77ef1ce47b0' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:38:11.4682|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:38:11.6707|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:38:11.7718|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'(from Customer x in DbSet<Customer>
+where bool string x.Firstname.ToLowerInvariant()
+.Contains(
+    value: __ToLowerInvariant_0
+)
+ || bool string x.Lastname.ToLowerInvariant()
+.Contains(
+    value: __ToLowerInvariant_1
+)
+
+order by x.Id asc
+select x)
+.Skip(__p_2)
+.Take(__p_3)' 
+2017-06-20 18:38:11.7903|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'(from Customer x in DbSet<Customer>
+where bool string x.Firstname.ToLowerInvariant()
+.Contains(
+    value: __ToLowerInvariant_0
+)
+ || bool string x.Lastname.ToLowerInvariant()
+.Contains(
+    value: __ToLowerInvariant_1
+)
+
+order by x.Id asc
+select x)
+.Skip(__p_2)
+.Take(__p_3)' 
+2017-06-20 18:38:11.8443|8|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|WARN|The LINQ expression '([x].Firstname.ToLowerInvariant().Contains(__ToLowerInvariant_0) OrElse [x].Lastname.ToLowerInvariant().Contains(__ToLowerInvariant_1))' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider. 
+2017-06-20 18:38:11.8618|8|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|WARN|The LINQ expression 'Skip(__p_2)' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider. 
+2017-06-20 18:38:11.8618|8|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|WARN|The LINQ expression 'Take(__p_3)' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider. 
+2017-06-20 18:38:11.8723|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> Take(
+    source: IEnumerable<Customer> Skip(
+        source: IEnumerable<Customer> _Where(
+            source: IEnumerable<Customer> _ShapedQuery(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+                    FROM [Customers] AS [x]
+                    ORDER BY [x].[Id]
+                , 
+                shaper: UnbufferedEntityShaper<Customer>
+            )
+            , 
+            predicate: (Customer x) => bool string x.Firstname.ToLowerInvariant()
+            .Contains(
+                value: string GetParameterValue(
+                    queryContext: queryContext, 
+                    parameterName: "__ToLowerInvariant_0"
+                )
+            )
+             || bool string x.Lastname.ToLowerInvariant()
+            .Contains(
+                value: string GetParameterValue(
+                    queryContext: queryContext, 
+                    parameterName: "__ToLowerInvariant_1"
+                )
+            )
+        )
+        , 
+        count: int GetParameterValue(
+            queryContext: queryContext, 
+            parameterName: "__p_2"
+        )
+    )
+    , 
+    count: int GetParameterValue(
+        queryContext: queryContext, 
+        parameterName: "__p_3"
+    )
+)
+ 
+2017-06-20 18:38:11.8723|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:38:11.8953|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x]
+ORDER BY [x].[Id] 
+2017-06-20 18:38:11.8953|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:38:11.8953|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-06-20 18:38:11.9263|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-06-20 18:38:11.9263|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-06-20 18:38:11.9263|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-06-20 18:38:12.1673|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 694.8255ms 
+2017-06-20 18:38:12.1774|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NVAUK2SAA" completed keep alive response. 
+2017-06-20 18:38:12.1844|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 1003.2452ms 200 application/json; charset=utf-8 
+2017-06-20 18:38:26.1798|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers?page=1&pagecount=1&sortby=firstname   
+2017-06-20 18:38:26.1798|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:38:26.1798|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:38:26.1798|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'ac520707-2e8c-427e-90e4-c77ef1ce47b0' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:38:26.1798|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:38:26.2068|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:38:26.2068|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'(from Customer x in DbSet<Customer>
+order by object PropertyInfo GetProperty(
+    type: Type x.GetType()
+    , 
+    name: __customerqueryParameters_SortBy_0
+)
+.GetValue(
+    obj: x
+)
+ asc
+select x)
+.Skip(__p_1)
+.Take(__p_2)' 
+2017-06-20 18:38:26.2068|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'(from Customer x in DbSet<Customer>
+order by object PropertyInfo GetProperty(
+    type: Type x.GetType()
+    , 
+    name: __customerqueryParameters_SortBy_0
+)
+.GetValue(
+    obj: x
+)
+ asc
+select x)
+.Skip(__p_1)
+.Take(__p_2)' 
+2017-06-20 18:38:26.2198|8|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|WARN|The LINQ expression 'orderby GetProperty([x].GetType(), __customerqueryParameters_SortBy_0).GetValue([x]) asc' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider. 
+2017-06-20 18:38:26.2198|8|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|WARN|The LINQ expression 'Skip(__p_1)' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider. 
+2017-06-20 18:38:26.2198|8|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|WARN|The LINQ expression 'Take(__p_2)' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider. 
+2017-06-20 18:38:26.2348|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> Take(
+    source: IEnumerable<Customer> Skip(
+        source: IOrderedEnumerable<Customer> _OrderBy(
+            source: IEnumerable<Customer> _ShapedQuery(
+                queryContext: queryContext, 
+                shaperCommandContext: SelectExpression: 
+                    SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+                    FROM [Customers] AS [x]
+                , 
+                shaper: UnbufferedEntityShaper<Customer>
+            )
+            , 
+            expression: (Customer x) => object PropertyInfo GetProperty(
+                type: Type x.GetType()
+                , 
+                name: string GetParameterValue(
+                    queryContext: queryContext, 
+                    parameterName: "__customerqueryParameters_SortBy_0"
+                )
+            )
+            .GetValue(
+                obj: x
+            )
+            , 
+            orderingDirection: Asc
+        )
+        , 
+        count: int GetParameterValue(
+            queryContext: queryContext, 
+            parameterName: "__p_1"
+        )
+    )
+    , 
+    count: int GetParameterValue(
+        queryContext: queryContext, 
+        parameterName: "__p_2"
+    )
+)
+ 
+2017-06-20 18:38:26.2348|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:38:26.2808|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x] 
+2017-06-20 18:38:26.2808|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:38:26.3393|1|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|ERROR|An exception occurred in the database while iterating the results of a query.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at lambda_method(Closure , Customer )
+   at System.Linq.EnumerableSorter`2.ComputeKeys(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.ComputeMap(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.ElementAt(TElement[] elements, Int32 count, Int32 idx)
+   at System.Linq.OrderedEnumerable`1.<GetEnumerator>d__7.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.<_TrackEntities>d__15`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext() Object reference not set to an instance of an object.
+2017-06-20 18:38:40.7906|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 14604.2652ms 
+2017-06-20 18:38:40.8355|0|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred: Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2017-06-20 18:38:40.8645|500|Global exception logger|ERROR|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2017-06-20 18:38:40.8741|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NVAUK2SAA" completed keep alive response. 
+2017-06-20 18:38:40.8741|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 14695.7505ms 500 text/plain 
+2017-06-20 18:38:58.3984|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers?page=1&pagecount=1&sortby=firstname   
+2017-06-20 18:38:58.3984|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:38:58.3984|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:38:58.3984|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'ac520707-2e8c-427e-90e4-c77ef1ce47b0' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:38:58.3984|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:38:58.4174|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:38:58.4230|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:38:58.4430|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (16ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x] 
+2017-06-20 18:38:58.4430|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:38:58.4610|1|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|ERROR|An exception occurred in the database while iterating the results of a query.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at lambda_method(Closure , Customer )
+   at System.Linq.EnumerableSorter`2.ComputeKeys(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.ComputeMap(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.ElementAt(TElement[] elements, Int32 count, Int32 idx)
+   at System.Linq.OrderedEnumerable`1.<GetEnumerator>d__7.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.<_TrackEntities>d__15`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext() Object reference not set to an instance of an object.
+2017-06-20 18:39:02.4213|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 4015.8067ms 
+2017-06-20 18:39:02.4473|0|Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware|ERROR|An unhandled exception has occurred: Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2017-06-20 18:39:02.4723|500|Global exception logger|ERROR|Object reference not set to an instance of an object. Object reference not set to an instance of an object.
+2017-06-20 18:39:02.4723|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5NVAUK2SAA" completed keep alive response. 
+2017-06-20 18:39:02.4723|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 4085.4873ms 500 text/plain 
+2017-06-20 18:39:04.9600|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55870/api/customers?page=1&pagecount=1&sortby=firstname   
+2017-06-20 18:39:04.9600|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/customers does not match a supported file type 
+2017-06-20 18:39:04.9600|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 18:39:04.9600|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'ac520707-2e8c-427e-90e4-c77ef1ce47b0' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 18:39:04.9600|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 18:39:04.9820|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments (packt_webapp.Controllers.CustomerQueryParameters) - ModelState is Valid 
+2017-06-20 18:39:32.7797|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer x in DbSet<Customer>
+order by object PropertyInfo GetProperty(
+    type: Type x.GetType()
+    , 
+    name: __customerqueryParameters_SortBy_0
+)
+.GetValue(
+    obj: x
+)
+ asc
+select x' 
+2017-06-20 18:39:32.7797|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer x in DbSet<Customer>
+order by object PropertyInfo GetProperty(
+    type: Type x.GetType()
+    , 
+    name: __customerqueryParameters_SortBy_0
+)
+.GetValue(
+    obj: x
+)
+ asc
+select x' 
+2017-06-20 18:39:32.7797|8|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|WARN|The LINQ expression 'orderby GetProperty([x].GetType(), __customerqueryParameters_SortBy_0).GetValue([x]) asc' could not be translated and will be evaluated locally. To configure this warning use the DbContextOptionsBuilder.ConfigureWarnings API (event id 'RelationalEventId.QueryClientEvaluationWarning'). ConfigureWarnings can be used when overriding the DbContext.OnConfiguring method or using AddDbContext on the application service provider. 
+2017-06-20 18:39:32.7797|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IOrderedEnumerable<Customer> _OrderBy(
+    source: IEnumerable<Customer> _ShapedQuery(
+        queryContext: queryContext, 
+        shaperCommandContext: SelectExpression: 
+            SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+            FROM [Customers] AS [x]
+        , 
+        shaper: UnbufferedEntityShaper<Customer>
+    )
+    , 
+    expression: (Customer x) => object PropertyInfo GetProperty(
+        type: Type x.GetType()
+        , 
+        name: string GetParameterValue(
+            queryContext: queryContext, 
+            parameterName: "__customerqueryParameters_SortBy_0"
+        )
+    )
+    .GetValue(
+        obj: x
+    )
+    , 
+    orderingDirection: Asc
+)
+ 
+2017-06-20 18:39:32.7967|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:39:32.7967|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x] 
+2017-06-20 18:39:32.7967|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:39:32.8187|1|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|ERROR|An exception occurred in the database while iterating the results of a query.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at lambda_method(Closure , Customer )
+   at System.Linq.EnumerableSorter`2.ComputeKeys(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.ComputeMap(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.Sort(TElement[] elements, Int32 count)
+   at System.Linq.OrderedEnumerable`1.<GetEnumerator>d__3.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.<_TrackEntities>d__15`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext() Object reference not set to an instance of an object.
+2017-06-20 18:39:32.8487|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:39:32.8487|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x] 
+2017-06-20 18:39:32.8487|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:39:32.8605|1|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|ERROR|An exception occurred in the database while iterating the results of a query.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at lambda_method(Closure , Customer )
+   at System.Linq.EnumerableSorter`2.ComputeKeys(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.ComputeMap(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.Sort(TElement[] elements, Int32 count)
+   at System.Linq.OrderedEnumerable`1.<GetEnumerator>d__3.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.<_TrackEntities>d__15`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext() Object reference not set to an instance of an object.
+2017-06-20 18:39:41.6673|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:39:41.6893|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (19ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x] 
+2017-06-20 18:39:41.6893|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 18:39:41.6893|1|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|ERROR|An exception occurred in the database while iterating the results of a query.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at lambda_method(Closure , Customer )
+   at System.Linq.EnumerableSorter`2.ComputeKeys(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.ComputeMap(TElement[] elements, Int32 count)
+   at System.Linq.EnumerableSorter`1.ElementAt(TElement[] elements, Int32 count, Int32 idx)
+   at System.Linq.OrderedEnumerable`1.<GetEnumerator>d__7.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.<_TrackEntities>d__15`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext() Object reference not set to an instance of an object.
+2017-06-20 19:46:16.1393|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:46:16.4353|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:46:16.4578|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:46:16.5758|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (100ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+2017-06-20 19:46:16.5758|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:46:16.7538|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 19:46:16.7643|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 19:46:16.8923|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-06-20 19:46:16.9113|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:46:16.9388|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-06-20 19:46:16.9983|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:46:17.0208|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:46:17.0298|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 19:46:17.1478|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (53ms) [Parameters=[@p0='?', @p1='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT; 
+2017-06-20 19:46:17.1553|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 19:46:17.1553|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:46:17.1943|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:46:17.1943|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 19:46:17.2723|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (51ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7); 
+2017-06-20 19:46:17.2788|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 19:46:17.2788|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:46:17.5448|3|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting starting 
+2017-06-20 19:46:17.6884|4|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting started 
+2017-06-20 19:46:17.7744|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" started. 
+2017-06-20 19:46:17.7744|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66H" started. 
+2017-06-20 19:46:17.8754|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/favicon.ico   
+2017-06-20 19:46:17.8754|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:55869/  0 
+2017-06-20 19:46:17.9574|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /favicon.ico does not match an existing file 
+2017-06-20 19:46:17.9669|3|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path  does not match the path filter 
+2017-06-20 19:46:17.9839|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" completed keep alive response. 
+2017-06-20 19:46:18.0019|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 133.541ms 200  
+2017-06-20 19:46:18.1879|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-06-20 19:46:18.1879|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66H" completed keep alive response. 
+2017-06-20 19:46:18.1879|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 338.7478ms 404  
+2017-06-20 19:46:31.0187|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/v1/swagger.json   
+2017-06-20 19:46:31.0187|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/v1/swagger.json does not match an existing file 
+2017-06-20 19:46:31.5856|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" completed keep alive response. 
+2017-06-20 19:46:31.5856|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 567.8727ms 200 application/json 
+2017-06-20 19:46:43.6675|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger   
+2017-06-20 19:46:43.6720|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger does not match a supported file type 
+2017-06-20 19:46:43.6720|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66H" completed keep alive response. 
+2017-06-20 19:46:43.6720|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 13.059ms 301  
+2017-06-20 19:46:43.6720|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/   
+2017-06-20 19:46:43.6720|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/ does not match a supported file type 
+2017-06-20 19:46:43.6980|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/index.html'. Physical path: 'N/A' 
+2017-06-20 19:46:43.7220|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" completed keep alive response. 
+2017-06-20 19:46:43.7220|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 40.6719ms 200 text/html 
+2017-06-20 19:46:43.7325|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/typography.css   
+2017-06-20 19:46:43.7325|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/reset.css   
+2017-06-20 19:46:43.7325|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/typography.css does not match an existing file 
+2017-06-20 19:46:43.7325|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66J" started. 
+2017-06-20 19:46:43.7325|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66K" started. 
+2017-06-20 19:46:43.7325|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66L" started. 
+2017-06-20 19:46:43.7325|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66M" started. 
+2017-06-20 19:46:43.7325|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/object-assign-pollyfill.js   
+2017-06-20 19:46:43.7325|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/reset.css does not match an existing file 
+2017-06-20 19:46:43.7325|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/screen.css   
+2017-06-20 19:46:43.7715|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery-1.8.0.min.js   
+2017-06-20 19:46:43.8065|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/css/reset.css'. Physical path: 'N/A' 
+2017-06-20 19:46:43.7325|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/css/typography.css'. Physical path: 'N/A' 
+2017-06-20 19:46:43.8065|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/screen.css does not match an existing file 
+2017-06-20 19:46:43.8065|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery-1.8.0.min.js does not match an existing file 
+2017-06-20 19:46:43.8100|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/css/screen.css'. Physical path: 'N/A' 
+2017-06-20 19:46:43.8100|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" completed keep alive response. 
+2017-06-20 19:46:43.8100|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 84.0603ms 200 text/css 
+2017-06-20 19:46:43.7715|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.slideto.min.js   
+2017-06-20 19:46:43.8100|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.ba-bbq.min.js   
+2017-06-20 19:46:43.8100|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/jquery-1.8.0.min.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.8100|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.ba-bbq.min.js does not match an existing file 
+2017-06-20 19:46:43.8065|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/object-assign-pollyfill.js does not match an existing file 
+2017-06-20 19:46:43.8100|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/jquery.ba-bbq.min.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.8100|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" completed keep alive response. 
+2017-06-20 19:46:43.8260|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 8.7569ms 200 application/javascript 
+2017-06-20 19:46:43.8100|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66K" completed keep alive response. 
+2017-06-20 19:46:43.8260|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 90.921ms 200 text/css 
+2017-06-20 19:46:43.8100|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.slideto.min.js does not match an existing file 
+2017-06-20 19:46:43.8260|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66L" completed keep alive response. 
+2017-06-20 19:46:43.8100|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66H" completed keep alive response. 
+2017-06-20 19:46:43.8100|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/object-assign-pollyfill.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.8260|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66J" completed keep alive response. 
+2017-06-20 19:46:43.8260|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 100.6966ms 200 application/javascript 
+2017-06-20 19:46:43.8260|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/lodash.min.js   
+2017-06-20 19:46:43.8260|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/handlebars-4.0.5.js   
+2017-06-20 19:46:43.8260|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/jquery.slideto.min.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.8430|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66M" completed keep alive response. 
+2017-06-20 19:46:43.8430|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/backbone-min.js   
+2017-06-20 19:46:43.8430|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/handlebars-4.0.5.js does not match an existing file 
+2017-06-20 19:46:43.8260|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 104.9993ms 200 text/css 
+2017-06-20 19:46:43.8575|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.wiggle.min.js   
+2017-06-20 19:46:43.8575|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.wiggle.min.js does not match an existing file 
+2017-06-20 19:46:43.8260|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 64.7402ms 200 application/javascript 
+2017-06-20 19:46:43.8575|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/swagger-ui.min.js   
+2017-06-20 19:46:43.8575|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/swagger-ui.min.js does not match an existing file 
+2017-06-20 19:46:43.8575|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/handlebars-4.0.5.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.8430|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/lodash.min.js does not match an existing file 
+2017-06-20 19:46:43.8430|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/backbone-min.js does not match an existing file 
+2017-06-20 19:46:43.8575|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/jquery.wiggle.min.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.8720|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66H" completed keep alive response. 
+2017-06-20 19:46:43.8575|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/lodash.min.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.8720|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/backbone-min.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.8720|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66K" completed keep alive response. 
+2017-06-20 19:46:43.8430|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 77.6849ms 200 application/javascript 
+2017-06-20 19:46:43.8720|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack.js   
+2017-06-20 19:46:43.8720|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 50.8182ms 200 application/javascript 
+2017-06-20 19:46:43.8575|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/swagger-ui.min.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.8720|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" completed keep alive response. 
+2017-06-20 19:46:43.8960|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/marked.js   
+2017-06-20 19:46:43.8960|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/marked.js does not match an existing file 
+2017-06-20 19:46:43.8720|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack.js does not match an existing file 
+2017-06-20 19:46:43.8960|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66L" completed keep alive response. 
+2017-06-20 19:46:43.8720|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 16.8816ms 200 application/javascript 
+2017-06-20 19:46:43.9035|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/marked.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.8960|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 67.8609ms 200 application/javascript 
+2017-06-20 19:46:43.9035|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 45.8702ms 200 application/javascript 
+2017-06-20 19:46:43.9035|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack_extended.js   
+2017-06-20 19:46:43.9035|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66K" completed keep alive response. 
+2017-06-20 19:46:43.9035|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack_extended.js does not match an existing file 
+2017-06-20 19:46:43.8720|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66J" completed keep alive response. 
+2017-06-20 19:46:43.9035|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 72.867ms 200 application/javascript 
+2017-06-20 19:46:43.9035|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 17.9081ms 200 application/javascript 
+2017-06-20 19:46:43.9035|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/swagger-oauth.js   
+2017-06-20 19:46:43.9035|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/highlight.9.1.0.pack_extended.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.9035|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/highlight.9.1.0.pack.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.9190|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66M" completed keep alive response. 
+2017-06-20 19:46:43.9190|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 40.9213ms 200 application/javascript 
+2017-06-20 19:46:43.9190|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/swagger-oauth.js does not match an existing file 
+2017-06-20 19:46:43.9190|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/swagger-oauth.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.9190|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66H" completed keep alive response. 
+2017-06-20 19:46:43.9190|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jsoneditor.min.js   
+2017-06-20 19:46:43.9350|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jsoneditor.min.js does not match an existing file 
+2017-06-20 19:46:43.9350|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 29.5865ms 200 application/javascript 
+2017-06-20 19:46:43.9350|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" completed keep alive response. 
+2017-06-20 19:46:43.9350|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 33.2329ms 200 application/javascript 
+2017-06-20 19:46:43.9350|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/lib/jsoneditor.min.js'. Physical path: 'N/A' 
+2017-06-20 19:46:43.9350|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66J" completed keep alive response. 
+2017-06-20 19:46:43.9350|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 31.0148ms 200 application/javascript 
+2017-06-20 19:46:43.9590|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/images/logo_small.png   
+2017-06-20 19:46:43.9590|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/images/logo_small.png does not match an existing file 
+2017-06-20 19:46:43.9590|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/images/logo_small.png'. Physical path: 'N/A' 
+2017-06-20 19:46:43.9590|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66K" completed keep alive response. 
+2017-06-20 19:46:43.9590|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 4.5232ms 200 image/png 
+2017-06-20 19:46:43.9715|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/print.css   
+2017-06-20 19:46:43.9715|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/print.css does not match an existing file 
+2017-06-20 19:46:43.9715|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/css/print.css'. Physical path: 'N/A' 
+2017-06-20 19:46:43.9715|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66H" completed keep alive response. 
+2017-06-20 19:46:43.9715|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 5.5177ms 200 text/css 
+2017-06-20 19:46:44.1355|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/v1/swagger.json   
+2017-06-20 19:46:44.1355|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/v1/swagger.json does not match an existing file 
+2017-06-20 19:46:44.1390|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66M" completed keep alive response. 
+2017-06-20 19:46:44.1390|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 4.2706ms 200 application/json 
+2017-06-20 19:46:44.2680|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/images/favicon-32x32.png   
+2017-06-20 19:46:44.2680|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/images/favicon-32x32.png does not match an existing file 
+2017-06-20 19:46:44.2680|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/images/favicon-32x32.png'. Physical path: 'N/A' 
+2017-06-20 19:46:44.2680|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" completed keep alive response. 
+2017-06-20 19:46:44.2680|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 3.824ms 200 image/png 
+2017-06-20 19:46:44.2680|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/images/favicon-16x16.png   
+2017-06-20 19:46:44.2680|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/images/favicon-16x16.png does not match an existing file 
+2017-06-20 19:46:44.2680|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/images/favicon-16x16.png'. Physical path: 'N/A' 
+2017-06-20 19:46:44.2785|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66L" completed keep alive response. 
+2017-06-20 19:46:44.2785|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 4.0912ms 200 image/png 
+2017-06-20 19:47:07.6004|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/images/throbber.gif   
+2017-06-20 19:47:07.6004|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/images/throbber.gif does not match an existing file 
+2017-06-20 19:47:07.6004|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/images/throbber.gif'. Physical path: 'N/A' 
+2017-06-20 19:47:07.6004|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66J" completed keep alive response. 
+2017-06-20 19:47:07.6004|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 4.4518ms 200 image/gif 
+2017-06-20 19:47:10.0927|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/api/Customers   
+2017-06-20 19:47:10.0927|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/Customers does not match a supported file type 
+2017-06-20 19:47:10.0927|3|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path  does not match the path filter 
+2017-06-20 19:47:10.0927|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 19:47:10.1302|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp)' with id 'eff13a45-12cb-4575-aa1f-a3da0c9b29a5' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 19:47:10.1532|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) 
+2017-06-20 19:47:10.2527|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) with arguments ((null)) - ModelState is Valid 
+2017-06-20 19:47:13.5532|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:47:13.5807|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-06-20 19:47:13.5807|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:47:13.5807|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-06-20 19:47:13.6077|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-06-20 19:47:13.6077|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-06-20 19:47:13.6077|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-06-20 19:47:13.6747|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp) in 3519.2519ms 
+2017-06-20 19:47:13.6747|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66K" completed keep alive response. 
+2017-06-20 19:47:13.6747|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 3587.1496ms 200 application/json; charset=utf-8 
+2017-06-20 19:48:07.7537|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66H" received FIN. 
+2017-06-20 19:48:07.7537|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66M" received FIN. 
+2017-06-20 19:48:07.7537|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66L" received FIN. 
+2017-06-20 19:48:07.7868|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" received FIN. 
+2017-06-20 19:48:07.7537|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66J" received FIN. 
+2017-06-20 19:48:07.8223|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66M" disconnecting. 
+2017-06-20 19:48:07.8223|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66H" disconnecting. 
+2017-06-20 19:48:07.8414|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66M" sending FIN. 
+2017-06-20 19:48:07.8223|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66L" disconnecting. 
+2017-06-20 19:48:07.8394|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" disconnecting. 
+2017-06-20 19:48:07.8414|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66H" sending FIN. 
+2017-06-20 19:48:07.8414|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66L" sending FIN. 
+2017-06-20 19:48:07.8394|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66J" disconnecting. 
+2017-06-20 19:48:07.8414|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66J" sending FIN. 
+2017-06-20 19:48:07.8414|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66L" sent FIN with status "0". 
+2017-06-20 19:48:07.8414|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66M" sent FIN with status "0". 
+2017-06-20 19:48:07.8414|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66J" sent FIN with status "0". 
+2017-06-20 19:48:07.8643|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66J" stopped. 
+2017-06-20 19:48:07.8643|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66M" stopped. 
+2017-06-20 19:48:07.8643|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" sending FIN. 
+2017-06-20 19:48:07.8643|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" sent FIN with status "0". 
+2017-06-20 19:48:07.8643|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66L" stopped. 
+2017-06-20 19:48:07.8643|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66I" stopped. 
+2017-06-20 19:48:07.8643|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66H" sent FIN with status "0". 
+2017-06-20 19:48:07.8643|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66H" stopped. 
+2017-06-20 19:48:14.3454|6|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66K" received FIN. 
+2017-06-20 19:48:14.3454|10|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66K" disconnecting. 
+2017-06-20 19:48:14.3454|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66N" started. 
+2017-06-20 19:48:14.3454|7|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66K" sending FIN. 
+2017-06-20 19:48:14.3454|8|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66K" sent FIN with status "0". 
+2017-06-20 19:48:14.3454|2|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66K" stopped. 
+2017-06-20 19:48:14.3454|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 POST http://localhost:55869/api/Customers application/json 67 
+2017-06-20 19:48:14.3454|1|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|POST requests are not supported 
+2017-06-20 19:48:14.3454|1|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|POST requests are not supported 
+2017-06-20 19:48:14.3454|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name '(null)' and template 'api/Customers'. 
+2017-06-20 19:48:14.3454|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.GetAllCustomers (packt_webapp)' with id '8d054b06-e111-4a8b-9658-d2d30e122150' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 19:48:14.3564|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp) 
+2017-06-20 19:48:14.4069|1|Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinder|DEBUG|Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonInputFormatter' for content type 'application/json'. 
+2017-06-20 19:48:14.5285|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp) with arguments (packt_webapp.Dtos.CustomerCreateDto) - ModelState is Valid 
+2017-06-20 19:48:14.5490|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:48:14.5490|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 19:48:14.5725|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (19ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3); 
+2017-06-20 19:48:14.5725|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 19:48:14.5725|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:48:14.5815|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp), returned result Microsoft.AspNetCore.Mvc.CreatedAtRouteResult. 
+2017-06-20 19:48:14.5815|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-06-20 19:48:14.5815|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-06-20 19:48:14.5815|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-06-20 19:48:14.6085|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.AddCustomer (packt_webapp) in 250.9851ms 
+2017-06-20 19:48:14.6085|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66N" completed keep alive response. 
+2017-06-20 19:48:14.6085|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 262.1361ms 201 application/json; charset=utf-8 
+2017-06-20 19:48:37.9603|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/api/Customers/e0012b6c-2bad-4531-d7bc-08d4b80486b3   
+2017-06-20 19:48:37.9603|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /api/Customers/e0012b6c-2bad-4531-d7bc-08d4b80486b3 does not match a supported file type 
+2017-06-20 19:48:37.9603|3|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path  does not match the path filter 
+2017-06-20 19:48:37.9603|1|Microsoft.AspNetCore.Routing.Tree.TreeRouter|DEBUG|Request successfully matched the route with name 'GetSingleCustomer' and template 'api/Customers/{id}'. 
+2017-06-20 19:48:37.9603|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.UpdateCustomer (packt_webapp)' with id 'cd9ec061-51cb-46f6-a169-9e7c6638703c' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 19:48:37.9603|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.PartiallyUpdate (packt_webapp)' with id '337603af-f2f3-4fef-9066-66035754770c' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 19:48:37.9603|2|Microsoft.AspNetCore.Mvc.Internal.ActionSelector|DEBUG|Action 'packt_webapp.Controllers.CustomersController.Remove (packt_webapp)' with id 'affef8e8-524b-4316-a079-5ca7496ccffa' did not match the constraint 'Microsoft.AspNetCore.Mvc.Internal.HttpMethodActionConstraint' 
+2017-06-20 19:48:37.9663|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executing action packt_webapp.Controllers.CustomersController.GetSingleCustomer (packt_webapp) 
+2017-06-20 19:48:37.9968|1|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executing action method packt_webapp.Controllers.CustomersController.GetSingleCustomer (packt_webapp) with arguments (e0012b6c-2bad-4531-d7bc-08d4b80486b3) - ModelState is Valid 
+2017-06-20 19:48:38.0393|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'(from Customer x in DbSet<Customer>
+where x.Id == __id_0
+select x)
+.FirstOrDefault()' 
+2017-06-20 19:48:38.0528|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'(from Customer x in DbSet<Customer>
+where x.Id == __id_0
+select x)
+.FirstOrDefault()' 
+2017-06-20 19:48:38.2003|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ToSequence(
+    element: Customer FirstOrDefault(
+        source: IEnumerable<Customer> _ShapedQuery(
+            queryContext: queryContext, 
+            shaperCommandContext: SelectExpression: 
+                SELECT TOP(1) [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+                FROM [Customers] AS [x]
+                WHERE [x].[Id] = @__id_0
+            , 
+            shaper: UnbufferedEntityShaper<Customer>
+        )
+    )
+)
+ 
+2017-06-20 19:48:38.2003|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:48:38.2298|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (26ms) [Parameters=[@__id_0='?'], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [x].[Id], [x].[Age], [x].[Firstname], [x].[Lastname]
+FROM [Customers] AS [x]
+WHERE [x].[Id] = @__id_0 
+2017-06-20 19:48:38.2318|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:48:38.2318|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|DEBUG|Executed action method packt_webapp.Controllers.CustomersController.GetSingleCustomer (packt_webapp), returned result Microsoft.AspNetCore.Mvc.OkObjectResult. 
+2017-06-20 19:48:38.2318|4|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|No information found on request to perform content negotiation. 
+2017-06-20 19:48:38.2318|2|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|DEBUG|Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.JsonOutputFormatter' and content type 'application/json' to write the response. 
+2017-06-20 19:48:38.2318|1|Microsoft.AspNetCore.Mvc.Internal.ObjectResultExecutor|INFO|Executing ObjectResult, writing value Microsoft.AspNetCore.Mvc.ControllerContext. 
+2017-06-20 19:48:38.2318|2|Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker|INFO|Executed action packt_webapp.Controllers.CustomersController.GetSingleCustomer (packt_webapp) in 268.6664ms 
+2017-06-20 19:48:38.2318|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0H0HJ66N" completed keep alive response. 
+2017-06-20 19:48:38.2318|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 277.7544ms 200 application/json; charset=utf-8 
+2017-06-20 19:50:43.0793|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:50:43.3813|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:50:43.3991|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:50:43.5346|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (116ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+IF EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE') SELECT 1 ELSE SELECT 0 
+2017-06-20 19:50:43.5346|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:50:43.7066|2|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Compiling query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 19:50:43.7166|3|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|Optimized query model: 
+'from Customer <generated>_0 in DbSet<Customer>
+select <generated>_0' 
+2017-06-20 19:50:43.8406|5|Microsoft.EntityFrameworkCore.Query.Internal.SqlServerQueryCompilationContextFactory|DEBUG|TRACKED: True
+(QueryContext queryContext) => IEnumerable<Customer> _ShapedQuery(
+    queryContext: queryContext, 
+    shaperCommandContext: SelectExpression: 
+        SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+        FROM [Customers] AS [c]
+    , 
+    shaper: UnbufferedEntityShaper<Customer>
+)
+ 
+2017-06-20 19:50:43.8591|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:50:43.9063|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[Age], [c].[Firstname], [c].[Lastname]
+FROM [Customers] AS [c] 
+2017-06-20 19:50:43.9658|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:50:43.9898|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:50:43.9898|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 19:50:44.1161|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (52ms) [Parameters=[@p0='?', @p1='?', @p2='?'], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Customers]
+WHERE [Id] = @p0;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+DELETE FROM [Customers]
+WHERE [Id] = @p2;
+SELECT @@ROWCOUNT; 
+2017-06-20 19:50:44.1236|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 19:50:44.1236|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:50:44.1616|3|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Opening connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:50:44.1616|5|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Beginning transaction with isolation level 'Unspecified'. 
+2017-06-20 19:50:44.2406|1|Microsoft.EntityFrameworkCore.Storage.IRelationalCommandBuilderFactory|INFO|Executed DbCommand (52ms) [Parameters=[@p0='?', @p1='?', @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?', @p5='?', @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Customers] ([Id], [Age], [Firstname], [Lastname])
+VALUES (@p0, @p1, @p2, @p3),
+(@p4, @p5, @p6, @p7); 
+2017-06-20 19:50:44.2406|6|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Committing transaction. 
+2017-06-20 19:50:44.2406|4|Microsoft.EntityFrameworkCore.Storage.Internal.SqlServerConnection|DEBUG|Closing connection to database 'PacktDatabase' on server '.\SQLEXPRESS'. 
+2017-06-20 19:50:44.4937|3|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting starting 
+2017-06-20 19:50:44.6052|4|Microsoft.AspNetCore.Hosting.Internal.WebHost|DEBUG|Hosting started 
+2017-06-20 19:50:44.7687|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTD" started. 
+2017-06-20 19:50:44.7687|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTC" started. 
+2017-06-20 19:50:44.8772|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 DEBUG http://localhost:55869/  0 
+2017-06-20 19:50:44.8772|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/favicon.ico   
+2017-06-20 19:50:44.9032|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTE" started. 
+2017-06-20 19:50:44.9032|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/   
+2017-06-20 19:50:44.9537|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /favicon.ico does not match an existing file 
+2017-06-20 19:50:44.9537|4|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/ does not match a supported file type 
+2017-06-20 19:50:44.9537|3|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path  does not match the path filter 
+2017-06-20 19:50:44.9812|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTD" completed keep alive response. 
+2017-06-20 19:50:44.9902|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 128.6458ms 200  
+2017-06-20 19:50:44.9902|2|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|Sending file. Request path: '/index.html'. Physical path: 'N/A' 
+2017-06-20 19:50:45.0397|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTE" completed keep alive response. 
+2017-06-20 19:50:45.0442|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 138.4753ms 200 text/html 
+2017-06-20 19:50:45.0442|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/typography.css   
+2017-06-20 19:50:45.0442|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/typography.css does not match an existing file 
+2017-06-20 19:50:45.0442|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/reset.css   
+2017-06-20 19:50:45.0607|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/reset.css does not match an existing file 
+2017-06-20 19:50:45.0607|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/typography.css was not modified 
+2017-06-20 19:50:45.0607|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/reset.css was not modified 
+2017-06-20 19:50:45.0607|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTF" started. 
+2017-06-20 19:50:45.0607|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTG" started. 
+2017-06-20 19:50:45.0607|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.slideto.min.js   
+2017-06-20 19:50:45.0607|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTH" started. 
+2017-06-20 19:50:45.0607|1|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTI" started. 
+2017-06-20 19:50:45.0607|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/typography.css 
+2017-06-20 19:50:45.0607|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/reset.css 
+2017-06-20 19:50:45.1334|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTE" completed keep alive response. 
+2017-06-20 19:50:45.1334|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 77.8054ms 304 text/css 
+2017-06-20 19:50:45.1334|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery-1.8.0.min.js   
+2017-06-20 19:50:45.0997|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/object-assign-pollyfill.js   
+2017-06-20 19:50:45.1394|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery-1.8.0.min.js does not match an existing file 
+2017-06-20 19:50:45.0607|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/screen.css   
+2017-06-20 19:50:45.1394|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/object-assign-pollyfill.js does not match an existing file 
+2017-06-20 19:50:45.1674|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery-1.8.0.min.js was not modified 
+2017-06-20 19:50:45.1689|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery-1.8.0.min.js 
+2017-06-20 19:50:45.1689|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTI" completed keep alive response. 
+2017-06-20 19:50:45.1689|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/object-assign-pollyfill.js was not modified 
+2017-06-20 19:50:45.0997|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.slideto.min.js does not match an existing file 
+2017-06-20 19:50:45.1334|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTD" completed keep alive response. 
+2017-06-20 19:50:45.1689|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/object-assign-pollyfill.js 
+2017-06-20 19:50:45.1689|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 119.2381ms 304 text/css 
+2017-06-20 19:50:45.1689|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTH" completed keep alive response. 
+2017-06-20 19:50:45.1689|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 77.331ms 304 application/javascript 
+2017-06-20 19:50:45.1674|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/screen.css does not match an existing file 
+2017-06-20 19:50:45.1394|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.wiggle.min.js   
+2017-06-20 19:50:45.1689|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.slideto.min.js was not modified 
+2017-06-20 19:50:45.1854|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.slideto.min.js 
+2017-06-20 19:50:45.1689|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/screen.css was not modified 
+2017-06-20 19:50:45.1689|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jquery.ba-bbq.min.js   
+2017-06-20 19:50:45.1689|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 37.4461ms 304 application/javascript 
+2017-06-20 19:50:45.1854|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.wiggle.min.js does not match an existing file 
+2017-06-20 19:50:45.1689|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/lodash.min.js   
+2017-06-20 19:50:45.1854|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/lodash.min.js does not match an existing file 
+2017-06-20 19:50:45.1854|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/lodash.min.js was not modified 
+2017-06-20 19:50:45.1854|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jquery.ba-bbq.min.js does not match an existing file 
+2017-06-20 19:50:45.1854|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTG" completed keep alive response. 
+2017-06-20 19:50:45.1854|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.ba-bbq.min.js was not modified 
+2017-06-20 19:50:45.2014|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.ba-bbq.min.js 
+2017-06-20 19:50:45.1854|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jquery.wiggle.min.js was not modified 
+2017-06-20 19:50:45.1854|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/screen.css 
+2017-06-20 19:50:45.1854|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/lodash.min.js 
+2017-06-20 19:50:45.2014|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTH" completed keep alive response. 
+2017-06-20 19:50:45.2014|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jquery.wiggle.min.js 
+2017-06-20 19:50:45.2014|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 25.883ms 304 application/javascript 
+2017-06-20 19:50:45.2014|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTE" completed keep alive response. 
+2017-06-20 19:50:45.2014|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 74.521ms 304 application/javascript 
+2017-06-20 19:50:45.1854|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/handlebars-4.0.5.js   
+2017-06-20 19:50:45.2164|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/handlebars-4.0.5.js does not match an existing file 
+2017-06-20 19:50:45.2014|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTF" completed keep alive response. 
+2017-06-20 19:50:45.2164|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack_extended.js   
+2017-06-20 19:50:45.2164|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 149.4023ms 304 text/css 
+2017-06-20 19:50:45.2164|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack_extended.js does not match an existing file 
+2017-06-20 19:50:45.2164|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/highlight.9.1.0.pack_extended.js was not modified 
+2017-06-20 19:50:45.2164|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/highlight.9.1.0.pack.js   
+2017-06-20 19:50:45.2164|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/highlight.9.1.0.pack.js does not match an existing file 
+2017-06-20 19:50:45.2164|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/highlight.9.1.0.pack.js was not modified 
+2017-06-20 19:50:45.2164|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/highlight.9.1.0.pack.js 
+2017-06-20 19:50:45.2014|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 130.5898ms 304 application/javascript 
+2017-06-20 19:50:45.2344|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/backbone-min.js   
+2017-06-20 19:50:45.2014|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTD" completed keep alive response. 
+2017-06-20 19:50:45.2164|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTH" completed keep alive response. 
+2017-06-20 19:50:45.2164|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/highlight.9.1.0.pack_extended.js 
+2017-06-20 19:50:45.2344|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTE" completed keep alive response. 
+2017-06-20 19:50:45.2344|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 24.7278ms 304 application/javascript 
+2017-06-20 19:50:45.2344|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 61.6104ms 304 application/javascript 
+2017-06-20 19:50:45.2164|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/handlebars-4.0.5.js was not modified 
+2017-06-20 19:50:45.2344|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/handlebars-4.0.5.js 
+2017-06-20 19:50:45.2344|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTI" completed keep alive response. 
+2017-06-20 19:50:45.2494|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 56.1265ms 304 application/javascript 
+2017-06-20 19:50:45.2344|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/swagger-ui.min.js   
+2017-06-20 19:50:45.2494|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/swagger-oauth.js   
+2017-06-20 19:50:45.2164|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/jsoneditor.min.js   
+2017-06-20 19:50:45.2344|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 23.0154ms 304 application/javascript 
+2017-06-20 19:50:45.2344|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/backbone-min.js does not match an existing file 
+2017-06-20 19:50:45.2494|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/swagger-oauth.js does not match an existing file 
+2017-06-20 19:50:45.2494|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/swagger-ui.min.js does not match an existing file 
+2017-06-20 19:50:45.2494|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/lib/marked.js   
+2017-06-20 19:50:45.2494|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/backbone-min.js was not modified 
+2017-06-20 19:50:45.2649|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/backbone-min.js 
+2017-06-20 19:50:45.2494|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/swagger-oauth.js was not modified 
+2017-06-20 19:50:45.2649|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/marked.js does not match an existing file 
+2017-06-20 19:50:45.2649|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTG" completed keep alive response. 
+2017-06-20 19:50:45.2809|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 46.2681ms 304 application/javascript 
+2017-06-20 19:50:45.2649|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/swagger-oauth.js 
+2017-06-20 19:50:45.2649|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/marked.js was not modified 
+2017-06-20 19:50:45.2809|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/marked.js 
+2017-06-20 19:50:45.2809|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTH" completed keep alive response. 
+2017-06-20 19:50:45.2949|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 40.6252ms 304 application/javascript 
+2017-06-20 19:50:45.2494|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/lib/jsoneditor.min.js does not match an existing file 
+2017-06-20 19:50:45.2809|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTE" completed keep alive response. 
+2017-06-20 19:50:45.2494|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /swagger-ui.min.js was not modified 
+2017-06-20 19:50:45.2949|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /swagger-ui.min.js 
+2017-06-20 19:50:45.2949|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTD" completed keep alive response. 
+2017-06-20 19:50:45.2949|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /lib/jsoneditor.min.js was not modified 
+2017-06-20 19:50:45.2949|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /lib/jsoneditor.min.js 
+2017-06-20 19:50:45.2949|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTF" completed keep alive response. 
+2017-06-20 19:50:45.2949|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 82.2878ms 304 application/javascript 
+2017-06-20 19:50:45.2949|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 49.327ms 304 application/javascript 
+2017-06-20 19:50:45.2949|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 59.067ms 304 application/javascript 
+2017-06-20 19:50:45.3119|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/images/logo_small.png   
+2017-06-20 19:50:45.3119|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/images/logo_small.png does not match an existing file 
+2017-06-20 19:50:45.3119|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /images/logo_small.png was not modified 
+2017-06-20 19:50:45.3119|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /images/logo_small.png 
+2017-06-20 19:50:45.3119|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTI" completed keep alive response. 
+2017-06-20 19:50:45.3119|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 4.5332ms 304 image/png 
+2017-06-20 19:50:45.3119|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/css/print.css   
+2017-06-20 19:50:45.3119|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/css/print.css does not match an existing file 
+2017-06-20 19:50:45.3119|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /css/print.css was not modified 
+2017-06-20 19:50:45.3119|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /css/print.css 
+2017-06-20 19:50:45.3119|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTG" completed keep alive response. 
+2017-06-20 19:50:45.3119|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 3.7024ms 304 text/css 
+2017-06-20 19:50:45.3689|1|Microsoft.AspNetCore.Builder.RouterMiddleware|DEBUG|Request did not match any routes. 
+2017-06-20 19:50:45.3689|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTC" completed keep alive response. 
+2017-06-20 19:50:45.3689|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 516.2038ms 404  
+2017-06-20 19:50:45.5034|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/v1/swagger.json   
+2017-06-20 19:50:45.5034|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/v1/swagger.json does not match an existing file 
+2017-06-20 19:50:46.0989|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTH" completed keep alive response. 
+2017-06-20 19:50:46.0989|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 596.417ms 200 application/json 
+2017-06-20 19:50:47.5915|1|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request starting HTTP/1.1 GET http://localhost:55869/swagger/images/throbber.gif   
+2017-06-20 19:50:47.5915|5|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|The request path /swagger/images/throbber.gif does not match an existing file 
+2017-06-20 19:50:47.5915|6|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|INFO|The file /images/throbber.gif was not modified 
+2017-06-20 19:50:47.5915|8|Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware|DEBUG|Handled. Status code: 304 File: /images/throbber.gif 
+2017-06-20 19:50:47.5915|9|Microsoft.AspNetCore.Server.Kestrel|DEBUG|Connection id "0HL5O0JG3QTTE" completed keep alive response. 
+2017-06-20 19:50:47.5915|2|Microsoft.AspNetCore.Hosting.Internal.WebHost|INFO|Request finished in 4.5988ms 304 image/gif 
