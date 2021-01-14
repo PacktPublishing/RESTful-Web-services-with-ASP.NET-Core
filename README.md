@@ -1,8 +1,3 @@
-## $5 Tech Unlocked 2021!
-[Buy and download this Video for only $5 on PacktPub.com](https://www.packtpub.com/product/restful-web-services-with-asp-net-core-video/9781788294638)
------
-*The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
-
 # RESTful-Web-services-with-ASP.NET-Core
 RESTful Web services with ASP.NET Core, published by Packt
 # RESTful Web services with ASP.NET Core [Video]
